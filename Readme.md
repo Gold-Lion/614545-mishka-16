@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Игорь Лавринов](https://up.htmlacademy.ru/adaptive/16/user/614545).
-* Наставник: [Алексей Пудников](https://htmlacademy.ru/profile/id71418).
+* Наставник: [Алексей Пудников](https://up.htmlacademy.ru/adaptive/16/user/71418).
 
 ---
 
