@@ -6,28 +6,27 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__logo-img" src="http://placehold.it/150x100" width="86" height="35" alt="Логотип Mishka">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__img" src="http://placehold.it/150x100" width="86" height="35" alt="Логотип Mishka">
       </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">Открыть меню</button>
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item">
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list navigation">
+          <li class="navigation__item">
             <a href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="navigation__item">
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-navigation__list user-list">
-          <li class="user-list_item">
-            <form class="user-list__form" action="https://echo.htmlacademy.ru" method="GET">
-              <label for="search-id">
-                <input class="user-list__form-input" id="search-id" type="search" name="search">
-              </label>
+        <ul class="navigation__list user">
+          <li class="user__item">
+            <form class="form__search search" action="https://echo.htmlacademy.ru" method="GET">
+              <label class="search__label" for="search-id"></label>
+              <input class="search__input" id="search-id" type="search" name="search" placeholder="Поиск по сайту">
             </form>
           </li>
-          <li class="user-list__item">
+          <li class="user__item">
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -56,36 +55,36 @@
           <span class="goods-main__item-week">Товар недели</span>
         </div>
         <p class="goods-main__desc">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-        <table class="goods-main__table">
+        <table class="goods-main__table table">
           <tr>
-            <td class="goods-main__td">Цвет:</td>
-            <td class="goods-main__td">«Тиффани»/серый</td>
+            <td class="table__td">Цвет:</td>
+            <td class="table__td">«Тиффани»/серый</td>
           </tr>
           <tr>
-            <td class="goods-main__td">Диаметр:</td>
-            <td class="goods-main__td">25 см</td>
+            <td class="table__td">Диаметр:</td>
+            <td class="table__td">25 см</td>
           </tr>
           <tr>
-            <td class="goods-main__td">Высота:</td>
-            <td class="goods-main__td">15 см</td>
+            <td class="table__td">Высота:</td>
+            <td class="table__td">15 см</td>
           </tr>
         </table>
-        <div class="goods-main__card">
-          <img class="goods-main__card-img" src="http://placehold.it/150x100" width="260" height="315" alt="Вязаные корзинки">
-          <span class="goods-main__card-price">Цена: 990 руб.</span>
-          <a class="btn btn__card-order" href="#">Заказать</a>
+        <div class="goods-main__card card">
+          <img class="card__img" src="http://placehold.it/150x100" width="260" height="315" alt="Вязаные корзинки">
+          <span class="card__price">Цена: 990 руб.</span>
+          <a class="btn btn__card" href="#">Заказать</a>
         </div>
       </section>
 
       <section class="about-us">
-        <h2 class="about-us__title">Коротко о нас:</h2>
-        <ul class="about-us__list">
-          <li class="about-us__item about-us__item--ecology-material">Экологически чистые материалы</li>
-          <li class="about-us__item about-us__item--scandinavian-style">Скандинавский стиль по российской цене</li>
-          <li class="about-us__item about-us__item--like-foto">Увеличивает лайки на фотографиях</li>
-          <li class="about-us__item about-us__item--linked-manually">Связано вручную с любовью и умилением</li>
-          <li class="about-us__item about-us__item--domestic-producer">Поддержка отечественного производителя</li>
-          <li class="about-us__item about-us__item--gift-wrapping">Поставляется в подарочной упаковке</li>
+        <h2 class="about__title">Коротко о нас:</h2>
+        <ul class="about__list">
+          <li class="about__item about__item--icon">Экологически чистые материалы</li>
+          <li class="about__item about__item--icon">Скандинавский стиль по российской цене</li>
+          <li class="about__item about__item--icon">Увеличивает лайки на фотографиях</li>
+          <li class="about__item about__item--icon">Связано вручную с любовью и умилением</li>
+          <li class="about__item about__item--icon">Поддержка отечественного производителя</li>
+          <li class="about__item about__item--icon">Поставляется в подарочной упаковке</li>
         </ul>
       </section>
 
@@ -103,10 +102,10 @@
               </p>
             </blockquote>
             <div class="comments__toggles slider__toggles">
-              <button class="slider__toggle--prev" type="button">
+              <button class="slider__toggle slider__toggle--prev" type="button">
                 <span class="visually-hidden">Предыдущий отзыв</span>
               </button>
-              <button class="slider__toggle--next" type="button">
+              <button class="slider__toggle slider__toggle--next" type="button">
                 <span class="visually-hidden">Следующий отзыв</span>
               </button>
             </div>
@@ -150,7 +149,7 @@
       </div>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано
-          <a class="copyright__link" href="https://htmlacademy.ru/profession/frontender"><img src="../img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/profession/frontender"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
         </p>
       </div>
     </footer>

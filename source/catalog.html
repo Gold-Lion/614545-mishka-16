@@ -6,28 +6,27 @@
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo-link" href="index.html">
-        <img class="page-header__logo-img" src="http://placehold.it/150x100" width="86" height="35" alt="Логотип Mishka">
+      <a class="page-header__logo logo" href="index.html">
+        <img class="logo__img" src="http://placehold.it/150x100" width="86" height="35" alt="Логотип Mishka">
       </a>
-      <nav class="main-navigation">
-        <button class="main-navigation__toggle" type="button">Открыть меню</button>
-        <ul class="main-navigation__list site-list">
-          <li class="site-list__item">
+      <nav class="header__navigation navigation">
+        <button class="navigation__toggle" type="button">Открыть меню</button>
+        <ul class="navigation__list navigation">
+          <li class="navigation__item">
             <a href="#">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="navigation__item">
             <a href="form.html">Вязание на заказ</a>
           </li>
         </ul>
-        <ul class="main-navigation__list user-list">
-          <li class="user-list_item">
-            <form class="user-list__form" action="https://echo.htmlacademy.ru" method="GET">
-              <label for="search-id">
-                <input class="user-list__form-input" id="search-id" type="search" name="search">
-              </label>
+        <ul class="navigation__list user">
+          <li class="user__item">
+            <form class="form__search search" action="https://echo.htmlacademy.ru" method="GET">
+              <label class="search__label" for="search-id"></label>
+              <input class="search__input" id="search-id" type="search" name="search" placeholder="Поиск по сайту">
             </form>
           </li>
-          <li class="user-list__item">
+          <li class="user__item">
             <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -39,30 +38,30 @@
       <section class="catalog">
         <h1 class="page-title">Каталог товаров</h1>
         <ul class="catalog__list catalog-list">
-          <li class="catalog-list__item catalog-item">
-            <img class="catalog-item__img" src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик">
-            <p class="catalog-item__desc">
+          <li class="catalog-list__item product">
+            <img class="product__img" src="http://placehold.it/150x100" alt="Зайчик-попрыгайчик">
+            <p class="product__desc">
               Зайчик-попрыгайчик<span class="desc-size">Рост 30 см, вес 200 г</span>
             </p>
-            <p class="catalog-item__price">
+            <p class="product__price">
               1200 руб.<span class="price-icon price-icon--cart"></span>
             </p>
           </li>
-          <li class="catalog-list__item catalog-item">
-            <img class="catalog-item__img" src="http://placehold.it/150x100" alt="Корзинка для белья">
-            <p class="catalog-item__desc">
+          <li class="catalog-list__item product">
+            <img class="product__img" src="http://placehold.it/150x100" alt="Корзинка для белья">
+            <p class="product__desc">
               Корзинка для белья<span class="desc-size">Диаметр 15 см, высота 10 см</span>
             </p>
-            <p class="catalog-item__price">
+            <p class="product__price">
               690 руб.<span class="price-icon price-icon--cart"></span>
             </p>
           </li>
-          <li class="catalog-list__item catalog-item">
-            <img class="catalog-item__img" src="http://placehold.it/150x100" alt="Большая корзинка для игрушек">
-            <p class="catalog-item__desc">
+          <li class="catalog-list__item product">
+            <img class="product__img" src="http://placehold.it/150x100" alt="Большая корзинка для игрушек">
+            <p class="product__desc">
               Большая корзинка для игрушек<span class="desc-size">Диаметр 30 см, высота 30 см</span>
             </p>
-            <p class="catalog-item__price">
+            <p class="product__price">
               1500 руб.<span class="price-icon price-icon--cart"></span>
             </p>
           </li>
@@ -100,7 +99,7 @@
       </div>
       <div class="footer__copyright copyright">
         <p class="copyright__text">Разработано
-          <a class="copyright__link" href="https://htmlacademy.ru/profession/frontender"><img src="../img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
+          <a class="copyright__link" href="https://htmlacademy.ru/profession/frontender"><img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy"></a>
         </p>
       </div>
     </footer>
