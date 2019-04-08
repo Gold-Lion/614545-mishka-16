@@ -1,0 +1,52 @@
+@import "variables.less";
+@import "mixin.less";
+@import "fonts.less";
+@import "blocks/visually-hidden.less";
+@import "blocks/logo.less";
+@import "blocks/navigation.less";
+@import "blocks/banner.less";
+@import "blocks/goods-main.less";
+@import "blocks/goods-card.less";
+@import "blocks/about.less";
+@import "blocks/btn.less";
+@import "blocks/comments.less";
+@import "blocks/contacts.less";
+@import "blocks/footer.less";
+@import "blocks/modal.less";
+@import "blocks/catalog.less";
+
+html {
+  background-color: white;//Временный стиль
+}
+
+body {
+  font-family: @font_family;
+  font-weight: @font_weight_regular;
+  margin: 0;//Временный стиль
+  padding: 0;
+  width: @body_width_mobile;//Временный стиль
+  background-color: @body_bg;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.page-title {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 76px 0;
+  font-size: 27px;
+  line-height: 30px;
+  font-weight: @font_weight_bold;
+  color: #000000;
+  text-align: center;
+  background-color: #f1f1f1;
+}
