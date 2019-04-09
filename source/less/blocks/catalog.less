@@ -77,15 +77,6 @@
   border: 1px solid @color_border;
 }
 
-.production__title {
-  position: relative;
-  margin: 0;
-  margin-bottom: 26px;
-  padding-left: 91px;
-  font-size: 17px;
-  .font-catalog();
-}
-
 .production__block {
   position: relative;
   display: flex;
@@ -127,8 +118,15 @@
 }
 
 .production__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 26px;
+  padding-left: 91px;
+  font-size: 17px;
+  .font-catalog();
+
   &--icon::before {
-    content: '';
+    content: "";
     position: absolute;
     top: 50%;
     left: 34px;
