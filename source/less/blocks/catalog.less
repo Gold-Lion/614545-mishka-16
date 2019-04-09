@@ -1,0 +1,134 @@
+.catalog {
+  margin-bottom: 58px;
+}
+
+.catalog__list {
+  .list-reset();
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.catalog-list__item {
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border: 1px solid @color_border;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+}
+
+.product__img {
+  margin-bottom: 31px;
+}
+
+.product__desc {
+  width: 204px;
+  margin: 0 auto;
+  padding-bottom: 27px;
+  font-size: 17px;
+  .font-catalog();
+  border-bottom: 1px solid @color_border;
+}
+
+.product__desc-size {
+  display: block;
+  font-size: 13px;
+  line-height: 30px;
+  font-weight: normal;
+  color: @color_text;
+}
+
+.product__price {
+  display: flex;
+  justify-content: space-between;
+  width: 204px;
+  margin: 27px auto;
+  font-size: 15px;
+  .font-catalog();
+}
+
+.product__price-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("../../img/cart.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.catalog-production {
+  margin: 0 auto;
+  margin-bottom: 58px;
+}
+
+.production {
+  width: 260px;
+  padding: 30px 0 35px;
+  border: 1px solid @color_border;
+}
+
+.production__block {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-bottom: 29px;
+}
+
+.production__video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/video-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.production__video-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 10;
+  width: 101px;
+  height: 77px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+.production__desc {
+  width: 192px;
+  margin: 0;
+  padding: 0 30px;
+  font-size: 13px;
+  line-height: 24px;
+  color: @color_text;
+}
+
+.production__title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 26px;
+  padding-left: 91px;
+  font-size: 17px;
+  .font-catalog();
+
+  &--icon::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 34px;
+    width: 32px;
+    height: 22px;
+    background-image: url("../../img/video.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+}
