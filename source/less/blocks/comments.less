@@ -1,42 +1,45 @@
 .comments {
+  margin-bottom: 40px;
   padding: 0 30px;
-  &__title {
-    margin: 0;
-    margin-bottom: 25px;
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: @font_weight_bold;
-    color: black;
-  }
-  &__item {
-    margin: 0;
-    margin-bottom: 36px;
-  }
-  &__text {
-    margin: 0;
-    margin-right: 8px;
-    font-size: 15px;
-    line-height: 30px;
-    color: black;
-  }
-  &__auth-name {
-    display: block;
-    margin-top: 30px;
-    font-size: 18px;
-    line-height: 24px;
-    font-weight: @font_weight_bold;
-    font-style: normal;
-  }
-  &__auth-mail {
-    font-size: 17px;
-    line-height: 30px;
-    color: @color_text;
-    text-decoration: none;
-  }
-  &__toggles {
-    width: 260px;
-    margin-bottom: 36px;
-  }
+}
+
+.comments__title {
+  margin: 0;
+  margin-bottom: 25px;
+  .h2-title();
+}
+
+.comments__item {
+  margin: 0;
+  margin-bottom: 36px;
+}
+
+.comments__text {
+  margin: 0;
+  margin-right: 8px;
+  font-size: 15px;
+  line-height: 30px;
+  color: black;
+}
+
+.comments__auth-name {
+  display: block;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: @font_bold;
+  font-style: normal;
+}
+
+.comments__auth-mail {
+  font-size: 17px;
+  line-height: 30px;
+  color: @color_text;
+  text-decoration: none;
+}
+
+.comments__toggles {
+  width: 260px;
+  margin-bottom: 36px;
 }
 
 .slider__toggles {
@@ -48,14 +51,16 @@
   display: inline-block;
   padding: 25px 67px 25px 61px;
   vertical-align: middle;
-  border: 1px solid #ececec;
+  border: 1px solid @color_border;
   background-color: transparent;
   cursor: pointer;
+
   &--prev {
     background-image: url("../../img/huge-arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
+
   &--next {
     background-image: url("../../img/huge-arrow.svg");
     background-repeat: no-repeat;

@@ -5,23 +5,27 @@
 .goods-main {
   padding: 0 30px;
   color: @color_text;
-  &__title {
-    margin: 0;
-    margin-bottom: 5px;
-  }
-  &__item-week {
-    font-weight: @font_weight_bold;
-    font-size: 17px;
-    line-height: 20px;
-    color: @seafoam_blue;
-    text-transform: uppercase;
-  }
-  &__desc {
-    margin: 0;
-    margin-bottom: 16px;
-    font-size: 15px;
-    line-height: 24px;
-  }
+}
+
+.goods-main__title {
+  margin: 0;
+  margin-bottom: 5px;
+  .h2-title();
+}
+
+.goods-main__item-week {
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: @font_bold;
+  color: @seafoam_blue;
+  text-transform: uppercase;
+}
+
+.goods-main__desc {
+  margin: 0;
+  margin-bottom: 16px;
+  font-size: 15px;
+  line-height: 24px;
 }
 
 .goods-main__table {
@@ -31,8 +35,9 @@
 .table {
   width: 100%;
   border-collapse: collapse;
-  &__td {
-    padding: 12px 25px 10px 0;
-    border-bottom: 1px solid lightgray; //Заменить
-  }
+}
+
+.table__td {
+  padding: 12px 25px 10px 0;
+  border-bottom: 1px solid @color_border;
 }

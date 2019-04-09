@@ -46,10 +46,10 @@
         <h2 class="banner__title">Милые штуки ручной работы&nbsp;для дома</h2>
         <ul class="banner__list goods-list">
           <li class="goods-list__item">
-            <a class="goods-list__item-link goods-list__item-link--interior" href="#">Предметы интерьера</a>
+            <a class="goods-list__link goods-list__link--interior" href="#">Предметы интерьера</a>
           </li>
           <li class="goods-list__item">
-            <a class="goods-list__item-link goods-list__item-link--toy" href="#">Детские игрушки</a>
+            <a class="goods-list__link goods-list__link--toy" href="#">Детские игрушки</a>
           </li>
         </ul>
       </section>
@@ -226,18 +226,18 @@
           <fieldset class="modal-form__fieldset">
             <legend class="modal-form__legend">Выберите размер:</legend>
             <p class="modal-form__block">
-              <label class="modal-form__label" for="l-id">L</label>
-              <input class="visually-hidden input-size" id="l-id" type="text" name="size-l">
-              <label class="modal-form__label" for="s-id">S</label>
+              <label class="modal-form__label modal-form__label--checked" for="s-id">S</label>
               <input class="visually-hidden input-size" id="s-id" type="text" name="size-s">
               <label class="modal-form__label" for="m-id">M</label>
               <input class="visually-hidden input-size" id="m-id" type="text" name="size-m">
+              <label class="modal-form__label" for="l-id">L</label>
+              <input class="visually-hidden input-size input-size" id="l-id" type="text" name="size-l">
             </p>
           </fieldset>
           <button class="btn btn__modal-add" type="submit">Добавить</button>
         </form>
-        <div class="modal__overlay modal__overlay--close"></div>
       </div>
     </section>
+    <div class="modal__overlay"></div>
   </body>
 </html>

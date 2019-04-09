@@ -1,63 +1,73 @@
 .modal {
   display: none;
   position: fixed;
-  top: 25%;
+  top: 50%;
+  z-index: 1000;
   width: 320px;
-  background-color: #fff;
-  &__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: -10;
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    opacity: 0.9;
-  }
+  background-color: #ffffff;
+  transform: translateY(-50%);
 }
 
 .modal-size {
   outline: 1px solid #c6c6c6;
-  box-shadow: 0 5px 10px 0 #000000;
-  &__wrapper {
-    width: 260px;
-    margin: 0 auto;
-    padding: 35px 30px;
-  }
-  &__title {
-    margin: 0;
-    font-size: 25px;
-    line-height: 30px;
-    color: #000000;
-    text-align: center;
-    text-transform: uppercase;
-  }
-  &__form {
-    margin-top: 25px;
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.3);
+}
+
+.modal-size__wrapper {
+  width: 260px;
+  margin: 0 auto;
+  padding: 35px 30px;
+}
+
+.modal-size__title {
+  margin: 0;
+  .h2-title();
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.modal-size__form {
+  margin-top: 25px;
+}
+
+.modal-form__fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.modal-form__legend {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.modal-form__block {
+  margin: 0;
+}
+
+.modal-form__label {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 82px;
+  padding: 15px;
+  margin-bottom: 30px;
+  text-align: center;
+  vertical-align: middle;
+  border: 2px solid @color_border;
+
+  &--checked {
+    border-color: @seafoam_blue;
   }
 }
 
-.modal-form {
-  &__fieldset {
-    margin: 0;
-    padding: 0;
-    border: none;
-  }
-  &__legend {
-    margin-bottom: 28px;
-    text-align: center;
-  }
-  &__block {
-    margin: 0;
-  }
-  &__label {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 82px;
-    padding: 15px;
-    margin-bottom: 30px;
-    text-align: center;
-    vertical-align: middle;
-    border: 2px solid #63d1bb;
-  }
+.modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  opacity: 0.9;
 }

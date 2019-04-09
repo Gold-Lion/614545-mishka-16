@@ -1,25 +1,24 @@
-.header__navigation {
-}
-
 .navigation {
   position: relative;
-  &__toggle {
-    position: absolute;
-    top: -50px;
-    right: 30px;
-    width: 20px;
-    height: 14px;
-    border: none;
-    background-color: transparent;
-    background-image: url("../../img/menu-open.png");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-    cursor: pointer;
-  }
-  &__list {
-    display: none;
-    .list-reset();
-  }
+}
+
+.navigation__toggle {
+  position: absolute;
+  top: -50px;
+  right: 30px;
+  width: 20px;
+  height: 14px;
+  border: none;
+  background-color: transparent;
+  background-image: url("../../img/menu-open.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+.navigation__list {
+  display: none;
+  .list-reset();
 }
 
 .site-list__item-link {
@@ -28,8 +27,9 @@
   padding: 27px 100px 27px 76px;
   font-size: 17px;
   line-height: 24px;
-  font-weight: @font_weight_bold;
+  font-weight: @font_bold;
   color: #000000;
+  vertical-align: middle;
   text-decoration: none;
 }
 
@@ -39,9 +39,11 @@
   padding: 27px 74px 27px 76px;
   font-size: 17px;
   line-height: 24px;
-  font-weight: @font_weight_bold;
+  font-weight: @font_bold;
   color: #000000;
+  vertical-align: middle;
   text-decoration: none;
+
   &::before {
     content: '';
     position: absolute;
@@ -58,30 +60,32 @@
 .search {
   display: flex;
   // justify-content: center;
-  &__label {
-    padding: 30px;
-    width: 18px;
-    height:18px;
-    background-image: url("../../img/search.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-  &__input {
-    width: 100%;
-    font-size: 17px;
-    line-height: 24px;
-    font-family: @font_family;
-    font-weight: @font_weight_bold;
+}
+
+.search__label {
+  padding: 30px;
+  width: 18px;
+  height: 18px;
+  background-image: url("../../img/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.search__input {
+  width: 100%;
   font-size: 17px;
   line-height: 24px;
-    border: none;
-    background-color: transparent;
-  }
+  font-family: @font_family;
+  font-weight: @font_bold;
+  font-size: 17px;
+  line-height: 24px;
+  border: none;
+  background-color: transparent;
 }
 
 .search__input::placeholder {
   font-size: 17px;
   line-height: 24px;
-  font-weight: @font_weight_bold;
+  font-weight: @font_bold;
   color: black;
 }

@@ -1,44 +1,49 @@
 .about {
   padding: 0 30px;
-  &__title {
-    margin: @margin_0;
-    margin-bottom: 31px;
-    font-size: 25px;
-    line-height: 30px;
-    font-weight: @font_weight_bold;
-  }
+}
+
+.about__title {
+  margin: 0;
+  margin-bottom: 31px;
+  .h2-title();
 }
 
 .about-list {
   .list-reset();
-  &__item {
-    position: relative;
-    padding-top: 53px;
-    padding-bottom: 30px;
-    font-size: 17px;
-    font-weight: bold;
-    line-height: 20px;
-  }
+}
+
+.about-list__item {
+  position: relative;
+  padding-top: 53px;
+  padding-bottom: 30px;
+  line-height: 20px;
+  font-weight: @font_bold;
 }
 
 .about-list__item-icon {
   position: absolute;
   top: 0;
+
   &--ecology {
     left: 10px;
   }
+
   &--style {
     left: 0;
   }
+
   &--likes {
     left: 8px;
   }
+
   &--handmade {
     left: 3px;
   }
+
   &--support {
     left: -6px;
   }
+
   &--gift {
     left: 4px;
   }
