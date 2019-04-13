@@ -9,3 +9,33 @@
   text-align: center;
   background-color: @page_title_bg;
 }
+
+@media (min-width: @tablet_width) {
+  .page-title {
+    position: relative;
+    margin-bottom: 70px;
+    padding: 100px 0;
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 24px;
+      background-image: url("../img/decor/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+    }
+  }
+}
+
+@media (min-width: @tablet_width) {
+  .page-title {
+    margin-bottom: 110px;
+    padding-bottom: 125px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+}

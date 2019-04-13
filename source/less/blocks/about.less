@@ -1,5 +1,5 @@
 .about {
-  padding: 0 30px;
+  margin-bottom: 30px;
 }
 
 .about__title {
@@ -8,8 +8,16 @@
   .h2-title();
 }
 
-.about-list {
+.about__list {
   .list-reset();
+}
+
+.about-list {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  max-width: 320px;
+  margin: 0 auto;
 }
 
 .about-list__item {
@@ -46,5 +54,72 @@
 
   &--gift {
     left: 4px;
+  }
+}
+
+@media (min-width: @tablet_width) {
+  .about {
+    margin-bottom: 50px;
+  }
+
+  .about__title {
+    margin-bottom: 45px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .about-list {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 668px;
+    max-width: 1150px;
+  }
+
+  .about-list__item {
+    width: 280px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &--ecology {
+      order: 0;
+    }
+
+    &--style {
+      order: 2;
+    }
+
+    &--likes {
+      order: 4;
+    }
+
+    &--handmade {
+      order: 1;
+    }
+
+    &--support {
+      order: 3;
+    }
+
+    &--gift {
+      order: 5;
+    }
+  }
+}
+
+@media (min-width: @desktop_width) {
+  .about {
+    margin-bottom: 60px;
+    padding-left: 225px;
+  }
+
+  .about__title {
+    margin-bottom: 45px;
+    font-size: 53px;
+    line-height: 57px;
+  }
+
+  .about-list {
+    margin: 0;
   }
 }

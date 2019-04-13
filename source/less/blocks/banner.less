@@ -1,16 +1,26 @@
 .banner {
-  margin-bottom: 30px;
   position: relative;
+  margin-bottom: 35px;
   padding-top: 70px;
-  width: 100%;
-  background-image: url("../../img/hero-mobile.png");
+  background-color: #f9f9f9;
+  background-image: url("../img/banner/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-position: center -20px;
+  background-position: center -49px;
+}
+
+.banner-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+  max-width: 1150px;
+  margin: 0 auto;
 }
 
 .banner__title {
   box-sizing: border-box;
   margin: auto;
+  margin-top: 0;
   padding: 0 30px;
   font-size: 27px;
   line-height: 30px;
@@ -19,7 +29,15 @@
 
 .banner__list {
   .list-reset();
-  padding-top: 121px;
+}
+
+.goods-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.goods-list__item {
+  flex-grow: 1;
 }
 
 .goods-list__link {
@@ -30,12 +48,102 @@
   line-height: 24px;
   color: white;
   text-decoration: none;
+}
 
-  &--interior {
-    background-color: @seafoam_blue;
+.goods-list__link--interior,
+.goods-list__link--toy {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 27px;
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: translateY(-50%);
+  }
+}
+
+.goods-list__link--interior {
+  background-color: @seafoam_blue;
+
+  &::after {
+    background-image: url("../img/decor/icon-interior.svg");
+  }
+}
+
+.goods-list__link--toy {
+  background-color: @greeny_blue;
+
+  &::after {
+    background-image: url("../img/decor/icon-toy.svg");
+  }
+}
+
+@media (min-width: @tablet_width) {
+  .banner {
+    margin-bottom: 41px;
+    padding-top: 163px;
+    background-image: url("../img/banner/hero-tablet@1x.jpg");
+    background-position: center bottom;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+      bottom: -12px;
+      height: 24px;
+      background-size: 768px 24px;
+      background-image: url("../img/decor/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+    }
   }
 
-  &--toy {
-    background-color: @greeny_blue;
+  .banner__title {
+    padding: 0 50px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  .goods-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 370px 50px 0px 50px;
+  }
+
+  .goods-list__item {
+    width: 50%;
+  }
+
+  .goods-list__link {
+    padding: 36px 184px 34px 30px;
+  }
+}
+
+@media (min-width: @desktop_width) {
+  .banner {
+    margin-bottom: 130px;
+    padding-top: 163px;
+    background-image: url("../img/banner/hero-desktop@1x.jpg");
+    background-position: center bottom;
+
+    &::after {
+      bottom: -17px;
+      height: 34px;
+      background-image: url("../img/decor/bg-zigzag-fill.svg");
+      background-repeat: repeat-x;
+    }
+  }
+
+  .banner__title {
+    width: 85%;
+    padding: 0 50px;
+    font-size: 53px;
+    line-height: 57px;
   }
 }

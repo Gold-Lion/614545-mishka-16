@@ -16,7 +16,26 @@
   cursor: pointer;
 }
 
+.btn__goods-main {
+  width: 100%;
+  max-width: 300px;
+}
+
+.btn__comment {
+  display: block;
+  width: 260px;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.btn__contacts {
+  width: 260px;
+  margin: 0 auto;
+}
+
 .btn__production {
+  width: 75%;
+  margin: 0 auto;
   margin-top: 30px;
 }
 
@@ -24,4 +43,46 @@
   color: #ffffff;
   border: none;
   background-color: @seafoam_blue;
+}
+
+@media (min-width: @tablet_width) {
+  .btn__goods-main {
+    align-self: flex-start;
+  }
+
+  .btn__comment {
+    position: absolute;
+    top: 80px;
+    right: 50px;
+    order: -1;
+    width: 175px;
+  }
+
+  .btn__contacts {
+    width: 230px;
+  }
+
+  .btn__production {
+    width: 87%;
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: @desktop_width) {
+  .btn__goods-main {
+    margin-left: 175px;
+  }
+
+  .btn__contacts {
+    margin: 0;
+    margin-left: 175px;
+  }
+
+  .btn__production {
+    width: 230px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    margin-left: auto;
+    margin-right: 55px;
+  }
 }
