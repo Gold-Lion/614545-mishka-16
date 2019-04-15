@@ -1,11 +1,31 @@
 .about {
   margin-bottom: 30px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-bottom: 60px;
+    padding-left: 225px;
+  }
 }
 
 .about__title {
   margin: 0;
   margin-bottom: 31px;
   .h2-title();
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 45px;
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .about__list {
@@ -18,6 +38,18 @@
   width: 260px;
   max-width: 320px;
   margin: 0 auto;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 668px;
+    max-width: 1150px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin: 0;
+  }
 }
 
 .about-list__item {
@@ -26,57 +58,8 @@
   padding-bottom: 30px;
   line-height: 20px;
   font-weight: @font_weight_bold;
-}
 
-.about-list__item-icon {
-  position: absolute;
-  top: 0;
-
-  &--ecology {
-    left: 10px;
-  }
-
-  &--style {
-    left: 0;
-  }
-
-  &--likes {
-    left: 8px;
-  }
-
-  &--handmade {
-    left: 3px;
-  }
-
-  &--support {
-    left: -6px;
-  }
-
-  &--gift {
-    left: 4px;
-  }
-}
-
-@media (min-width: @tablet_width) {
-  .about {
-    margin-bottom: 50px;
-  }
-
-  .about__title {
-    margin-bottom: 45px;
-    font-size: 43px;
-    line-height: 50px;
-  }
-
-  .about-list {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 668px;
-    max-width: 1150px;
-  }
-
-  .about-list__item {
+  @media (min-width: @tablet_width) {
     width: 280px;
     font-size: 20px;
     line-height: 22px;
@@ -107,19 +90,31 @@
   }
 }
 
-@media (min-width: @desktop_width) {
-  .about {
-    margin-bottom: 60px;
-    padding-left: 225px;
+.about-list__item-icon {
+  position: absolute;
+  top: 0;
+
+  &--ecology {
+    left: 10px;
   }
 
-  .about__title {
-    margin-bottom: 45px;
-    font-size: 53px;
-    line-height: 57px;
+  &--style {
+    left: 0;
   }
 
-  .about-list {
-    margin: 0;
+  &--likes {
+    left: 8px;
+  }
+
+  &--handmade {
+    left: 3px;
+  }
+
+  &--support {
+    left: -6px;
+  }
+
+  &--gift {
+    left: 4px;
   }
 }

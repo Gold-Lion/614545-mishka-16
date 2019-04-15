@@ -2,6 +2,12 @@
   display: flex;
   flex-direction: column;
   color: @color_text;
+
+  @media (min-width: @desktop_width) {
+    position: relative;
+    width: 1050px;
+    margin: 0 auto;
+  }
 }
 
 .contacts__title {
@@ -12,6 +18,40 @@
   line-height: 30px;
   font-weight: @font_weight_bold;
   color: #000000;
+
+  @media (min-width: @tablet_width) {
+    position: relative;
+    width: 668px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+    padding: 0 50px;
+    font-size: 43px;
+    line-height: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -25px;
+      right: 50px;
+      width: 47px;
+      height: 81px;
+      background-image: url("../img/decor/icon-flag.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 300px;
+    margin-left: 0;
+    padding: 0;
+    padding-left: 175px;
+
+    &::after {
+      top: -15px;
+      left: 65px;
+    }
+  }
 }
 
 .contacts__block-wrapper {
@@ -19,6 +59,20 @@
   max-width: 320px;
   margin: 0 auto;
   padding: 0 30px;
+
+  @media (min-width: @tablet_width) {
+    display: flex;
+    justify-content: space-between;
+    min-width: 668px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    flex-direction: column;
+    min-width: 300px;
+    margin-left: 175px;
+    margin-bottom: 60px;
+  }
 }
 
 .contacts__mail {
@@ -27,6 +81,17 @@
   margin-bottom: 37px;
   font-size: 15px;
   line-height: 30px;
+
+  @media (min-width: @tablet_width) {
+    width: 300px;
+    height: 100%;
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 280px;
+    margin-bottom: 35px;
+  }
 }
 
 .contacts__link {
@@ -43,6 +108,12 @@
   font-size: 15px;
   line-height: 30px;
   font-style: normal;
+
+  @media (min-width: @tablet_width) {
+    width: 300px;
+    margin: 0;
+    font-size: 17px;
+  }
 }
 
 .contacts__address {
@@ -69,6 +140,19 @@
     background-repeat: no-repeat;
     background-position: center;
   }
+
+  @media (min-width: @tablet_width) {
+    margin-top: 55px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: @desktop_width) {
+    position: absolute;
+    top: -70px;
+    right: 0;
+    width: 525px;
+    margin: 0;
+  }
 }
 
 .contacts__map {
@@ -78,106 +162,16 @@
   &--mobile {
     display: block;
   }
-}
 
-@media (min-width: @tablet_width) {
-  .contacts__title {
-    position: relative;
-    width: 668px;
-    margin: 0 auto;
-    margin-bottom: 55px;
-    padding: 0 50px;
-    font-size: 43px;
-    line-height: 50px;
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: -25px;
-      right: 50px;
-      width: 47px;
-      height: 81px;
-      background-image: url("../img/decor/icon-flag.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-  }
-
-  .contacts__block-wrapper {
-    display: flex;
-    justify-content: space-between;
-    min-width: 668px;
-    padding: 0;
-  }
-
-  .contacts__mail {
-    width: 300px;
-    height: 100%;
-    margin: 0;
-    font-size: 17px;
-    line-height: 30px;
-  }
-
-  .contacts__block {
-    width: 300px;
-    margin: 0;
-    font-size: 17px;
-  }
-
-  .contacts__link-map {
-    margin-top: 55px;
-    margin-bottom: 55px;
-  }
-
-  .contacts__map {
+  @media (min-width: @tablet_width) {
     display: none;
 
     &--tablet {
       display: block;
     }
   }
-}
 
-@media (min-width: @desktop_width) {
-  .contacts {
-    position: relative;
-    width: 1050px;
-    margin: 0 auto;
-  }
-
-  .contacts__title {
-    width: 300px;
-    margin-left: 0;
-    padding: 0;
-    padding-left: 175px;
-
-    &::after {
-      top: -15px;
-      left: 65px;
-    }
-  }
-
-  .contacts__block-wrapper {
-    flex-direction: column;
-    min-width: 300px;
-    margin-left: 175px;
-    margin-bottom: 60px;
-  }
-
-  .contacts__mail {
-    width: 280px;
-    margin-bottom: 35px;
-  }
-
-  .contacts__link-map {
-    position: absolute;
-    top: -70px;
-    right: 0;
-    width: 525px;
-    margin: 0;
-  }
-
-  .contacts__map {
+  @media (min-width: @desktop_width) {
     display: none;
 
     &--desk {

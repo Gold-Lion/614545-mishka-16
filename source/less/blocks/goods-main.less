@@ -22,6 +22,15 @@
     background-position: center;
     background-size: 320px 7px;
   }
+
+  @media (min-width: @tablet_width) {
+    padding-bottom: 70px;
+
+    &::after {
+      height: 17px;
+      background-size: 728px 17px;
+    }
+  }
 }
 
 .goods-main__title-block {
@@ -29,12 +38,40 @@
   flex-direction: column;
   width: 100%;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: @desktop_width) {
+    position: relative;
+    z-index: 10;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    width: 655px;
+    margin-bottom: 40px;
+  }
 }
 
 .goods-main__title {
   margin: 0;
   margin-bottom: 5px;
   .h2-title();
+
+  @media (min-width: @tablet_width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: auto;
+    font-size: 53px;
+    line-height: 57px;
+  }
 }
 
 .goods-main__item-week {
@@ -43,6 +80,15 @@
   font-weight: @font_weight_bold;
   color: @seafoam_blue;
   text-transform: uppercase;
+
+  @media (min-width: @tablet_width) {
+    width: 70px;
+    text-align: center;
+  }
+
+  @media (min-width: @desktop_width) {
+    padding-left: 46px;
+  }
 }
 
 .goods-main__desc {
@@ -51,6 +97,17 @@
   margin-bottom: 16px;
   font-size: 15px;
   line-height: 24px;
+
+  @media (min-width: @tablet_width) {
+    width: 300px;
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 175px;
+    margin-bottom: 40px;
+  }
 }
 
 .goods-main__table {
@@ -60,6 +117,16 @@
 .table {
   width: 100%;
   border-collapse: collapse;
+
+  @media (min-width: @tablet_width) {
+    align-self: flex-start;
+    width: 300px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 175px;
+    margin-bottom: 90px;
+  }
 }
 
 .table__td {
@@ -71,6 +138,21 @@
   width: 260px;
   margin: 0 auto;
   margin-bottom: 30px;
+
+  @media (min-width: @tablet_width) {
+    position: absolute;
+    top: 104px;
+    right: 0;
+    width: 333px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: -60px;
+    right: 50px;
+    order: 2;
+    width: 525px;
+    margin: 0;
+  }
 }
 
 .goods-main__img {
@@ -78,6 +160,22 @@
 
   &--mobile {
     display: block;
+  }
+
+  @media (min-width: @tablet_width) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop_width) {
+    display: none;
+
+    &--desk {
+      display: block;
+    }
   }
 }
 
@@ -87,121 +185,15 @@
   margin-bottom: 30px;
   text-align: center;
   font-weight: @font_weight_bold;
-}
 
-@media (min-width: @tablet_width) {
-  .goods-main {
-    padding-bottom: 70px;
-
-    &::after {
-      height: 17px;
-      background-size: 728px 17px;
-    }
-  }
-
-  .goods-main__title-block {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-bottom: 54px;
-  }
-
-  .goods-main__title {
-    margin: 0;
-    font-size: 43px;
-    line-height: 50px;
-  }
-
-  .goods-main__item-week {
-    width: 70px;
-    line-height: 1;
-    text-align: center;
-  }
-
-  .goods-main__desc {
-    width: 300px;
-    font-size: 17px;
-    line-height: 30px;
-  }
-
-  .table {
-    align-self: flex-start;
-    width: 300px;
-    border-collapse: collapse;
-  }
-
-  .goods-main__img-wrapper {
-    position: absolute;
-    top: 104px;
-    right: 50px;
-    width: 333px;
-  }
-
-  .goods-main__img {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
-  }
-
-  .goods-main__price {
+  @media (min-width: @tablet_width) {
     align-self: flex-start;
     width: 300px;
     font-size: 20px;
     line-height: 24px;
   }
-}
 
-@media (min-width: @desktop_width) {
-  .goods-main__title-block {
-    position: relative;
-    z-index: 10;
-    flex-direction: row-reverse;
-    align-self: flex-start;
-    width: 655px;
-    margin-bottom: 40px;
-  }
-
-  .goods-main__title {
-    margin-left: auto;
-    font-size: 53px;
-    line-height: 57px;
-  }
-
-  .goods-main__item-week {
-    padding-left: 46px;
-  }
-
-  .goods-main__desc {
-    margin-left: 175px;
-    margin-bottom: 40px;
-  }
-
-  .table {
-    margin-left: 175px;
-    margin-bottom: 90px;
-  }
-
-  .goods-main__img-wrapper {
-    position: absolute;
-    top: -60px;
-    right: 50px;
-    order: 2;
-    width: 525px;
-    margin: 0;
-  }
-
-  .goods-main__img {
-    display: none;
-
-    &--desk {
-      display: block;
-    }
-  }
-
-  .goods-main__price {
+  @media (min-width: @desktop_width) {
     margin-left: 175px;
   }
 }

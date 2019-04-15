@@ -19,6 +19,14 @@
 .btn__goods-main {
   width: 100%;
   max-width: 300px;
+
+  @media (min-width: @tablet_width) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 175px;
+  }
 }
 
 .btn__comment {
@@ -26,63 +34,51 @@
   width: 260px;
   max-width: 320px;
   margin: 0 auto;
-}
 
-.btn__contacts {
-  width: 260px;
-  margin: 0 auto;
-}
-
-.btn__production {
-  width: 75%;
-  margin: 0 auto;
-  margin-top: 30px;
-}
-
-.btn__modal-add {
-  color: #ffffff;
-  border: none;
-  background-color: @seafoam_blue;
-}
-
-@media (min-width: @tablet_width) {
-  .btn__goods-main {
-    align-self: flex-start;
-  }
-
-  .btn__comment {
+  @media (min-width: @tablet_width) {
     position: absolute;
     top: 80px;
     right: 50px;
     order: -1;
     width: 175px;
   }
+}
 
-  .btn__contacts {
+.btn__contacts {
+  width: 260px;
+  margin: 0 auto;
+
+  @media (min-width: @tablet_width) {
     width: 230px;
   }
 
-  .btn__production {
-    width: 87%;
-    margin-top: 40px;
-  }
-}
-
-@media (min-width: @desktop_width) {
-  .btn__goods-main {
-    margin-left: 175px;
-  }
-
-  .btn__contacts {
+  @media (min-width: @desktop_width) {
     margin: 0;
     margin-left: 175px;
   }
+}
 
-  .btn__production {
+.btn__production {
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  @media (min-width: @tablet_width) {
+    width: 87%;
+    margin-top: 40px;
+  }
+
+  @media (min-width: @desktop_width) {
     width: 230px;
     margin-top: 50px;
     margin-bottom: 60px;
     margin-left: auto;
     margin-right: 55px;
   }
+}
+
+.btn__modal-add {
+  color: #ffffff;
+  border: none;
+  background-color: @seafoam_blue;
 }

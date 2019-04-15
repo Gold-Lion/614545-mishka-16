@@ -15,77 +15,8 @@
     background-position: center;
     background-size: 300px 6px;
   }
-}
 
-.comments__title {
-  margin: 0;
-  margin-bottom: 25px;
-  .h2-title();
-}
-
-.comments__item {
-  margin: 0;
-  margin-bottom: 36px;
-}
-
-.comments__text {
-  margin: 0;
-  margin-right: 8px;
-  font-size: 15px;
-  line-height: 30px;
-  color: black;
-}
-
-.comments__auth-name {
-  display: block;
-  margin-top: 30px;
-  font-size: 18px;
-  font-weight: @font_weight_bold;
-  font-style: normal;
-}
-
-.comments__auth-mail {
-  font-size: 17px;
-  line-height: 30px;
-  color: @color_text;
-  text-decoration: none;
-}
-
-.comments__toggles {
-  margin: 0 auto;
-  margin-bottom: 36px;
-}
-
-.slider__toggles {
-  display: flex;
-  justify-content: space-between;
-  width: 260px;
-  max-width: 320px;
-}
-
-.slider__toggle {
-  display: inline-block;
-  padding: 25px 67px 25px 61px;
-  vertical-align: middle;
-  border: 1px solid @color_border;
-  background-color: transparent;
-  cursor: pointer;
-
-  &--prev {
-    background-image: url("../img/decor/icon-left-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  &--next {
-    background-image: url("../img/decor/icon-right-arrow.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-}
-
-@media (min-width: @tablet_width) {
-  .comments {
+  @media (min-width: @tablet_width) {
     margin-bottom: 70px;
     padding-top: 80px;
     padding-bottom: 135px;
@@ -110,52 +41,9 @@
     }
   }
 
-  .comments__title {
-    display: inline-block;
-    font-size: 43px;
-    line-height: 50px;
-    margin-bottom: 55px;
-  }
-
-  .comments__list {
-    position: relative;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .comments__item {
-    margin-bottom: 0;
-  }
-
-  .comments__text {
-    font-size: 17px;
-  }
-
-  .comments__auth-name {
-    margin-top: 70px;
-  }
-
-  .comments__toggles {
-    margin-bottom: 0;
-  }
-
-  .slider__toggles {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    width: 175px;
-  }
-
-  .slider__toggle {
-    padding: 25px 43px;
-    border: none;
-  }
-}
-
-@media (min-width: @desktop_width) {
-  .comments {
-    padding-bottom: 187px;
+  @media (min-width: @desktop_width) {
     margin-bottom: 150px;
+    padding-bottom: 187px;
 
     &::before {
       left: -165px;
@@ -168,14 +56,124 @@
       background-size: 1150px 23px;
     }
   }
+}
 
-  .comments__title {
-    font-size: 53px;
-    line-height: 57px;
+.comments__title {
+  margin: 0;
+  margin-bottom: 25px;
+  .h2-title();
+
+  @media (min-width: @tablet_width) {
+    display: inline-block;
     margin-bottom: 55px;
+    font-size: 43px;
+    line-height: 50px;
   }
 
-  .comments__text {
+  @media (min-width: @desktop_width) {
+    font-size: 53px;
+    line-height: 57px;
+  }
+}
+
+.comments__list {
+  @media (min-width: @tablet_width) {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.comments__item {
+  margin: 0;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 0;
+  }
+}
+
+.comments__text {
+  margin: 0;
+  margin-right: 8px;
+  font-size: 15px;
+  line-height: 30px;
+  color: #000000;
+
+  @media (min-width: @tablet_width) {
+    font-size: 17px;
+  }
+
+  @media (min-width: @desktop_width) {
     margin-right: 290px;
+  }
+}
+
+.comments__auth-name {
+  display: block;
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: @font_weight_bold;
+  font-style: normal;
+
+  @media (min-width: @tablet_width) {
+    margin-top: 70px;
+  }
+}
+
+.comments__auth-mail {
+  font-size: 17px;
+  line-height: 30px;
+  color: @color_text;
+  text-decoration: none;
+}
+
+.comments__toggles {
+  margin: 0 auto;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet_width) {
+    margin-bottom: 0;
+  }
+}
+
+.slider__toggles {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  max-width: 320px;
+
+
+  @media (min-width: @tablet_width) {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 175px;
+  }
+}
+
+.slider__toggle {
+  display: inline-block;
+  padding: 25px 67px 25px 61px;
+  vertical-align: middle;
+  border: 1px solid @color_border;
+  background-color: transparent;
+  cursor: pointer;
+
+  &--prev {
+    background-image: url("../img/decor/icon-left-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  &--next {
+    background-image: url("../img/decor/icon-right-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  @media (min-width: @tablet_width) {
+    padding: 25px 43px;
+    border: none;
   }
 }

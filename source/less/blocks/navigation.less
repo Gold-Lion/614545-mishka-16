@@ -4,11 +4,23 @@
   flex-direction: column;
   max-width: 1150px;
   margin: 0 auto;
+
+  @media (min-width: @tablet_width) {
+    flex-direction: row;
+  }
 }
 
 .navigation__logo-wrapper {
   position: relative;
   display: flex;
+
+  @media (min-width: @tablet_width) {
+    order: 0;
+  }
+
+  @media (min-width: @desktop_width) {
+    order: 1;
+  }
 }
 
 .navigation__logo {
@@ -16,6 +28,10 @@
   justify-content: center;
   height: 80px;
   margin: auto;
+
+  @media (min-width: @tablet_width) {
+    height: 88px;
+  }
 }
 
 .logo__img {
@@ -23,6 +39,22 @@
 
   &--mobile {
     display: block;
+  }
+
+  @media (min-width: @tablet_width) {
+    display: none;
+
+    &--tablet {
+      display: block;
+    }
+  }
+
+  @media (min-width: @desktop_width) {
+    display: none;
+
+    &--desk {
+      display: block;
+    }
   }
 }
 
@@ -49,6 +81,10 @@
     height: 20px;
     background-image: url("../../img/decor/icon-menu-close.svg");
   }
+
+  @media (min-width: @tablet_width) {
+    display: none;
+  }
 }
 
 .navigation__list {
@@ -58,9 +94,33 @@
   margin: 0 auto;
 }
 
+.site-list {
+  @media (min-width: @tablet_width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop_width) {
+    order: 0;
+  }
+}
+
+.user-list {
+  @media (min-width: @tablet_width) {
+    order: 1;
+  }
+
+  @media (min-width: @desktop_width) {
+    order: 2;
+  }
+}
+
 .site-list__item {
   &--off {
     display: none;
+
+    @media (min-width: @desktop_width) {
+      display: block;
+    }
   }
 }
 
@@ -79,7 +139,6 @@
 
 .search {
   display: flex;
-  // justify-content: center;
 }
 
 .search__label {
@@ -145,76 +204,8 @@
   line-height: 24px;
   font-weight: @font_weight_normal;
   color: @color_text;
-}
 
-@media (min-width: @tablet_width) {
-  .navigation {
-    flex-direction: row;
-  }
-
-  .navigation__logo-wrapper {
-    order: 0;
-  }
-
-  .navigation__logo {
-    height: 88px;
-  }
-
-  .logo__img {
-    display: none;
-
-    &--tablet {
-      display: block;
-    }
-  }
-
-  .header__delivery {
-    display: block;
-  }
-
-  .navigation__toggle {
-    display: none;
-  }
-
-  .site-list {
-    order: 2;
-  }
-
-  .user-list {
-    order: 1;
-  }
-}
-
-@media (min-width: @desktop_width) {
-  .navigation__logo-wrapper {
-    order: 1;
-  }
-
-  .navigation__logo {
-    height: 88px;
-  }
-
-  .logo__img {
-    display: none;
-
-    &--desk {
-      display: block;
-    }
-  }
-
-  .navigation__toggle {
-    display: none;
-  }
-
-  .site-list {
-    order: 0;
-  }
-
-  .user-list {
-    order: 2;
-  }
-
-  .site-list__item--off {
+  @media (min-width: @tablet_width) {
     display: block;
   }
 }
