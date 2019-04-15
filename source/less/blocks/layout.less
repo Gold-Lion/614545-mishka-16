@@ -1,6 +1,6 @@
 body {
-  margin: 0;
-  min-width: @body_width_mobile;
+  min-width: @mobile_width;
+  margin: 0 auto;
   .font();
   background-color: @body_bg;
 }
@@ -8,4 +8,20 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  @media (min-width: @tablet_width) {
+    width: 768px;
+    padding: 0 50px;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 1150px;
+  }
 }
