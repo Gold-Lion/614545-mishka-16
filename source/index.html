@@ -3,38 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="page-header">
-      <nav class="header__navigation navigation">
-        <div class="navigation__logo-wrapper container">
-          <a class="navigation__logo logo" href="index.html">
-            <img class="logo__img logo__img--mobile" src="img/logo/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
-            <img class="logo__img logo__img--tablet" src="img/logo/logo-tablet.svg" width="113" height="46" alt="Логотип Mishka">
-            <img class="logo__img logo__img--desk" src="img/logo/logo-desktop.svg" width="149" height="72" alt="Логотип Mishka">
+    <header class="page-header page-header--index">
+      <nav class="navigation">
+        <div class="navigation__logo-wrapper">
+          <a class="navigation__logo" href="index.html">
+            <span class="visually-hidden">Логотип Mishka</span>
           </a>
-          <button class="navigation__toggle navigation__toggle--open" type="button">
-            <span class="visually-hidden">Открыть меню</span>
-          </button>
-          <button class="navigation__toggle navigation__toggle--close" type="button">
-            <span class="visually-hidden">Закрыть меню</span>
-          </button>
         </div>
+        <button class="navigation__toggle navigation__toggle--open" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
         <ul class="navigation__list site-list">
           <li class="site-list__item">
             <a class="site-list__item-link" href="catalog.html">Каталог товаров</a>
           </li>
           <li class="site-list__item">
             <a class="site-list__item-link" href="form.html">Вязание на заказ</a>
-          </li>
-          <li class="site-list__item site-list__item--off">
-            <a class="site-list__item-link" href="#">Новые поступления</a>
-          </li>
-          <li class="site-list__item site-list__item--off">
-            <a class="site-list__item-link" href="#">Распродажа</a>
           </li>
         </ul>
         <ul class="navigation__list user-list">
@@ -48,7 +37,15 @@
             <a class="user-list__item-link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
-      <p class="header__delivery">Бесплатная доставка по России</p>
+        <ul class="navigation__list offer-list">
+          <li class="offer-list__item">
+            <a class="offer-list__item-link" href="#">Новые поступления</a>
+          </li>
+          <li class="offer-list__item">
+            <a class="offer-list__item-link" href="#">Распродажа</a>
+          </li>
+        </ul>
+        <p class="header__delivery">Бесплатная доставка по России</p>
       </nav>
     </header>
 
@@ -90,10 +87,8 @@
             <td class="table__td">15 см</td>
           </tr>
         </table>
-        <div class="goods-main__img-wrapper">
-          <img class="goods-main__img goods-main__img--mobile" src="img/goods-main/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
-          <img class="goods-main__img goods-main__img--tablet" src="img/goods-main/triple-set-tablet@1x.jpg" width="333" height="404" alt="Вязаные корзинки">
-          <img class="goods-main__img goods-main__img--desk" src="img/goods-main/triple-set-desktop@1x.jpg" width="525" height="636" alt="Вязаные корзинки">
+        <div class="goods-main__img">
+            <span class="visually-hidden">Товар недели</span>
         </div>
         <p class="goods-main__price">Цена: 990 руб.</p>
         <a class="btn btn__goods-main" href="#">Заказать</a>
@@ -194,10 +189,8 @@
             <span class="contacts__address">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
           </address>
         </div>
-        <a class="contacts__link-map" href="map.html">
-          <img class="contacts__map contacts__map--mobile" src="img/contacts/map-mobile@1x.jpg" width="320" height="457" src="Карта нашего местонахождения">
-          <img class="contacts__map contacts__map--tablet" src="img/contacts/map-tablet@1x.jpg" width="768" height="457" src="Карта нашего местонахождения">
-          <img class="contacts__map contacts__map--desk" src="img/contacts/map-desktop@1x.jpg" width="525" height="457" src="Карта нашего местонахождения">
+        <a class="contacts__map" href="map.html">
+          <span class="visually-hidden">Карта нашего местонахождения</span>
         </a>
         <a class="btn btn__contacts" href="write.html">Напишите нам</a>
       </section>
@@ -266,5 +259,13 @@
       </div>
     </section>
     <div class="modal__overlay"></div>
+    <script>
+      var navMenu = document.querySelector(".navigation");
+      var navToggle = document.querySelector(".navigation__toggle");
+
+      navToggle.addEventListener("click", function() {
+        navMenu.classList.toggle("navigation--opened");
+      });
+    </script>
   </body>
 </html>
