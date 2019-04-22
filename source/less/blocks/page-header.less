@@ -1,4 +1,12 @@
 .page-header {
-  background-color: @header_logo_bg;
-  border-bottom: 1px solid @color_border;
+  background-color: #ffffff;
+
+  @media (min-width: @tablet_width) {
+    border: none;
+    background-color: #f1f1f1;
+
+    &--index {
+      background-color: #f9f9f9;
+    }
+  }
 }
