@@ -32,7 +32,10 @@
       background-size: 350px 487px;
       background-image: url("../img/comments/review@1x.jpg");
       background-repeat: no-repeat;
-      background-position: 0 0;
+
+      @media (min-resolution: @retina_dpi), (min-resolution: @retina_dppx) {
+        background-image: url("../img/comments/review@2x.jpg");
+      }
     }
 
     &::after {

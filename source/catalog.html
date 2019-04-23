@@ -12,7 +12,11 @@
       <nav class="navigation">
         <div class="navigation__logo-wrapper">
           <a class="navigation__logo" href="index.html">
-            <span class="visually-hidden">Логотип Mishka</span>
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
+              <img src="img/logo/logo-mobile.svg" width="86" height="35" alt="Логотип Mishka">
+            </picture>
           </a>
         </div>
         <button class="navigation__toggle navigation__toggle--open" type="button">
@@ -56,9 +60,13 @@
         <div class="catalog__wrapper container">
           <ul class="catalog__list catalog-list">
             <li class="catalog-list__item product">
-              <img class="product__img product__img--mobile" src="img/catalog/photo-hare-mobile@1x.jpg" width="260" height="195" alt="Зайчик-попрыгайчик">
-              <img class="product__img product__img--tablet" src="img/catalog/photo-hare-tablet@1x.jpg" width="334" height="334" alt="Зайчик-попрыгайчик">
-              <img class="product__img product__img--desk" src="img/catalog/photo-hare-desktop@1x.jpg" width="316" height="462" alt="Зайчик-попрыгайчик">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/photo-hare-desktop@1x.jpg 1x, img/catalog/photo-hare-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-hare-tablet@1x.jpg 1x, img/catalog/photo-hare-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/catalog/photo-hare-mobile@1x.jpg" srcset="img/catalog/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
+                </picture>
+              </div>
               <div class="product-desc__wrapper">
                 <p class="product__desc">
                   Зайчик-попрыгайчик<span class="product__desc-size">Рост 30 см, вес 200 г</span>
@@ -69,9 +77,13 @@
               </div>
             </li>
             <li class="catalog-list__item product">
-              <img class="product__img product__img--mobile" src="img/catalog/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="Корзинка для белья">
-              <img class="product__img product__img--tablet" src="img/catalog/photo-bowl-tablet@1x.jpg" width="334" height="334" alt="Корзинка для белья">
-              <img class="product__img product__img--desk" src="img/catalog/photo-bowl-desktop@1x.jpg" width="316" height="462" alt="Корзинка для белья">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/photo-bowl-desktop@1x.jpg 1x, img/catalog/photo-bowl-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-bowl-tablet@1x.jpg 1x, img/catalog/photo-bowl-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/catalog/photo-bowl-mobile@1x.jpg" srcset="img/catalog/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                </picture>
+              </div>
               <div class="product-desc__wrapper">
                 <p class="product__desc">
                   Корзинка для белья<span class="product__desc-size">Диаметр 15 см, высота 10 см</span>
@@ -82,9 +94,13 @@
               </div>
             </li>
             <li class="catalog-list__item product">
-              <img class="product__img product__img--mobile" src="img/catalog/photo-toys-mobile@1x.jpg" width="260" height="195" alt="Большая корзинка для игрушек">
-              <img class="product__img product__img--tablet" src="img/catalog/photo-toys-tablet@1x.jpg" width="334" height="334" alt="Большая корзинка для игрушек">
-              <img class="product__img product__img--desk" src="img/catalog/photo-toys-desktop@1x.jpg" width="316" height="462" alt="Большая корзинка для игрушек">
+              <div class="product__img-wrapper">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/catalog/photo-toys-desktop@1x.jpg 1x, img/catalog/photo-toys-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/photo-toys-tablet@1x.jpg 1x, img/catalog/photo-toys-tablet@2x.jpg 2x">
+                  <img class="product__img" src="img/catalog/photo-toys-mobile@1x.jpg" srcset="img/catalog/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
+                </picture>
+              </div>
               <div class="product-desc__wrapper">
                 <p class="product__desc">
                   Большая корзинка для игрушек<span class="product__desc-size">Диаметр 30 см, высота 30 см</span>
@@ -175,5 +191,6 @@
       </div>
     </section>
     <div class="modal__overlay"></div>
+    <script src="scripts/menu.js"></script>
   </body>
 </html>
