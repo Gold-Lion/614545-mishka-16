@@ -24,6 +24,7 @@
   }
 
   @media (min-width: @tablet_width) {
+    padding: 0 50px;
     padding-bottom: 70px;
 
     &::after {
@@ -33,7 +34,7 @@
   }
 }
 
-.goods-main__title-block {
+.goods-main__title-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -53,6 +54,7 @@
     flex-direction: row-reverse;
     align-self: flex-start;
     width: 655px;
+    padding-left: 40px;
   }
 }
 
@@ -82,11 +84,8 @@
 
   @media (min-width: @tablet_width) {
     width: 70px;
+    padding-right: 27px;
     text-align: center;
-  }
-
-  @media (min-width: @desktop_width) {
-    padding-left: 46px;
   }
 }
 
@@ -134,31 +133,33 @@
 }
 
 .goods-main__img {
-  width: 260px;
-  height: 315px;
   margin: 0 auto;
   margin-bottom: 30px;
-  background-image: url("../img/goods-main/triple-set-mobile@1x.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
 
   @media (min-width: @tablet_width) {
     position: absolute;
     top: 95px;
-    right: 0;
-    width: 333px;
-    height: 404px;
-    background-image: url("../img/goods-main/triple-set-tablet@1x.jpg");
+    right: 50px;
   }
 
   @media (min-width: @desktop_width) {
     top: -60px;
-    right: 50px;
     order: 2;
-    width: 525px;
-    height: 636px;
     margin: 0;
-    background-image: url("../img/goods-main/triple-set-desktop@1x.jpg");
+  }
+}
+
+.goods-main__img img {
+  width: 260px;
+  height: 315px;
+
+  @media (min-width: @tablet_width) {
+    width: 333px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop_width) {
+    width: 525px;
   }
 }
 
