@@ -25,6 +25,10 @@
   @media (min-width: @tablet_width) {
     margin-bottom: 55px;
   }
+
+  @media (min-width: @tablet_width) {
+    min-height: 659px;
+  }
 }
 
 .product {
@@ -44,16 +48,12 @@
   }
 }
 
-.product__img {
+.product__img-wrapper {
   margin-bottom: 31px;
+}
 
-  @media (min-width: @tablet_width) {
-
-  }
-
-  @media (min-width: @desktop_width) {
-
-  }
+.product__img {
+  display: block;
 }
 
 .product-desc__wrapper {
