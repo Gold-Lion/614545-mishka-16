@@ -1,7 +1,7 @@
 .page-title {
   margin: 0;
   margin-bottom: 30px;
-  padding: 76px 0;
+  padding: 71px 0 75px;
   font-size: 27px;
   line-height: 30px;
   font-weight: @font_weight_bold;
@@ -11,8 +11,8 @@
 
   @media (min-width: @tablet_width) {
     position: relative;
-    margin-bottom: 70px;
-    padding: 100px 0;
+    margin-bottom: 66px;
+    padding: 36px 0 92px;
     font-size: 43px;
     line-height: 50px;
 
@@ -23,15 +23,21 @@
       right: 0;
       bottom: 0;
       height: 24px;
+      background-size: 768px 24px;
       background-image: url("../img/decor/bg-zigzag-fill.svg");
       background-repeat: repeat-x;
     }
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 110px;
-    padding-bottom: 125px;
+    margin-bottom: 121px;
+    padding-top: 33px;
+    padding-bottom: 112px;
     font-size: 53px;
     line-height: 57px;
+
+    &::after {
+      background-size: 1000px 24px;
+    }
   }
 }

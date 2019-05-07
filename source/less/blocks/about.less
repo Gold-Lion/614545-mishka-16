@@ -1,13 +1,13 @@
 .about {
-  margin-bottom: 30px;
+  margin-bottom: 27px;
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 50px;
+    margin-bottom: 29px;
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 60px;
-    padding-left: 225px;
+    margin-bottom: 104px;
+    padding-left: 224px;
   }
 }
 
@@ -18,7 +18,7 @@
 
   @media (min-width: @tablet_width) {
     margin-bottom: 45px;
-    font-size: 43px;
+    font-size: 42px;
     line-height: 50px;
   }
 
@@ -35,15 +35,13 @@
 .about-list {
   display: flex;
   flex-direction: column;
-  width: 260px;
-  max-width: 320px;
+  min-width: 260px;
   margin: 0 auto;
 
   @media (min-width: @tablet_width) {
     flex-direction: row;
-    justify-content: space-between;
     flex-wrap: wrap;
-    width: 668px;
+    min-width: 668px;
     max-width: 1150px;
   }
 
@@ -59,8 +57,14 @@
   line-height: 20px;
   font-weight: @font_weight_bold;
 
+  svg {
+    fill: @greeny_blue;
+  }
+
   @media (min-width: @tablet_width) {
-    width: 300px;
+    width: 334px;
+    margin-bottom: 25px;
+    padding-top: 56px;
     font-size: 20px;
     line-height: 22px;
 
@@ -88,6 +92,10 @@
       order: 5;
     }
   }
+
+  @media (min-width: @desktop_width) {
+    width: 351px;
+  }
 }
 
 .about-list__item-icon {
@@ -103,6 +111,7 @@
   }
 
   &--likes {
+    top: 7px;
     left: 8px;
   }
 
@@ -111,10 +120,17 @@
   }
 
   &--support {
+    top: 4px;
     left: -6px;
   }
 
   &--gift {
     left: 4px;
+  }
+
+  @media (min-width: @desktop_width) {
+    &--handmade {
+      top: 6px;
+    }
   }
 }

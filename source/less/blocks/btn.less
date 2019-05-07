@@ -2,7 +2,7 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 20px 10px;
+  padding: 14px 10px;
   font-size: 17px;
   line-height: 20px;
   font-weight: @font_weight_bold;
@@ -13,7 +13,19 @@
   color: @color_text;
   border: 2px solid @btn_border;
   background-color: @btn_bg;
+  transition: color 0.2s ease-in-out,
+    background-color 0.2s ease-in-out;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: @btn_border;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .btn__goods-main {
@@ -22,9 +34,11 @@
 
   @media (min-width: @tablet_width) {
     align-self: flex-start;
+    width: 289px;
   }
 
   @media (min-width: @desktop_width) {
+    width: 292px;
     margin-left: 175px;
   }
 }
@@ -37,10 +51,14 @@
 
   @media (min-width: @tablet_width) {
     position: absolute;
-    top: 80px;
+    top: 77px;
     right: 50px;
     order: -1;
     width: 175px;
+  }
+
+  @media (min-width: @desktop_width) {
+    top: 8px;
   }
 }
 
@@ -59,21 +77,36 @@
 }
 
 .btn__production {
-  width: 75%;
+  width: 74%;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 25px;
 
   @media (min-width: @tablet_width) {
-    width: 87%;
-    margin-top: 40px;
+    width: 88%;
+    margin-top: 35px;
   }
 
   @media (min-width: @desktop_width) {
     width: 230px;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin: 60px;
+    margin-top: 47px;
     margin-left: auto;
-    margin-right: 55px;
+  }
+}
+
+.btn__form-feedback {
+  max-width: 260px;
+  margin: 0 auto;
+  margin-top: 31px;
+
+  @media (min-width: @tablet_width) {
+    max-width: 230px;
+    margin: 0;
+    margin-right: auto;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-left: 175px;
   }
 }
 

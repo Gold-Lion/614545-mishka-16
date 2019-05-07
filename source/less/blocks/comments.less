@@ -1,7 +1,7 @@
 .comments {
   position: relative;
   margin-bottom: 35px;
-  padding-bottom: 42px;
+  padding-bottom: 53px;
 
   &::after {
     content: "";
@@ -17,8 +17,8 @@
   }
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 70px;
-    padding-top: 80px;
+    margin-bottom: 60px;
+    padding-top: 77px;
     padding-bottom: 135px;
 
     &::before {
@@ -29,7 +29,7 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background-size: 350px 487px;
+      background-size: 350px 455px;
       background-image: url("../img/comments/review@1x.jpg");
       background-repeat: no-repeat;
 
@@ -40,16 +40,20 @@
 
     &::after {
       height: 17px;
-      background-size: 768px 17px;
+      left: -40px;
+      background-size: 760px 17px;
     }
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 150px;
+    margin-bottom: 141px;
+    padding-top: 0;
+    padding-left: 224px;
     padding-bottom: 187px;
 
     &::before {
-      left: -165px;
+      left: 49px;
+      top: -70px;
     }
 
     &::after {
@@ -68,7 +72,7 @@
 
   @media (min-width: @tablet_width) {
     display: inline-block;
-    margin-bottom: 55px;
+    margin-bottom: 49px;
     font-size: 43px;
     line-height: 50px;
   }
@@ -89,7 +93,7 @@
 
 .comments__item {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 26px;
 
   @media (min-width: @tablet_width) {
     margin-bottom: 0;
@@ -98,7 +102,6 @@
 
 .comments__text {
   margin: 0;
-  margin-right: 8px;
   font-size: 15px;
   line-height: 30px;
   color: #000000;
@@ -108,19 +111,24 @@
   }
 
   @media (min-width: @desktop_width) {
-    margin-right: 290px;
+    margin-right: 85px;
   }
 }
 
 .comments__auth-name {
   display: block;
-  margin-top: 30px;
-  font-size: 18px;
+  margin-top: 22px;
+  font-size: 17px;
   font-weight: @font_weight_bold;
   font-style: normal;
 
   @media (min-width: @tablet_width) {
-    margin-top: 70px;
+    margin-top: 52px;
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop_width) {
+    margin-top: 35px;
   }
 }
 
@@ -133,7 +141,7 @@
 
 .comments__toggles {
   margin: 0 auto;
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 
   @media (min-width: @tablet_width) {
     margin-bottom: 0;
@@ -161,7 +169,17 @@
   vertical-align: middle;
   border: 1px solid @color_border;
   background-color: transparent;
+  transition: opacity 0.2s ease-in-out;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--prev {
     background-image: url("../img/decor/icon-left-arrow.svg");
