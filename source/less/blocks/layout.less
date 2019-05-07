@@ -11,17 +11,13 @@ img {
 }
 
 .container {
-  box-sizing: border-box;
-  width: 100%;
+  min-width: 320px;
+  max-width: 1150px;
   margin: 0 auto;
   padding: 0 30px;
+  box-sizing: border-box;
 
   @media (min-width: @tablet_width) {
-    width: 768px;
     padding: 0 50px;
-  }
-
-  @media (min-width: @desktop_width) {
-    width: 1150px;
   }
 }
