@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 
 <body>
-  <div style="display:none">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+  <include src="build/img/sprite.svg"></include>
 
   <header class="page-header page-header--index">
-    <nav class="navigation">
-      <div class="navigation__logo-wrapper">
-        <a class="navigation__logo" href="index.html">
+    <nav class="navigation navigation--nojs">
+      <div class="navigation__logo">
+        <a class="navigation__logo-wrapper">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
@@ -85,27 +87,29 @@
       </div>
     </section>
 
-    <section class="goods-main container">
+    <section class="goods-main">
       <div class="goods-main__title-wrapper">
         <h2 class="goods-main__title">Вязаные корзинки</h2>
         <span class="goods-main__item-week">Товар недели</span>
       </div>
-      <p class="goods-main__desc">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках, и трех
-        размерах.</p>
-      <table class="goods-main__table table">
-        <tr>
-          <td class="table__td">Цвет:</td>
-          <td class="table__td">«Тиффани»/серый</td>
-        </tr>
-        <tr>
-          <td class="table__td">Диаметр:</td>
-          <td class="table__td">25 см</td>
-        </tr>
-        <tr>
-          <td class="table__td">Высота:</td>
-          <td class="table__td">15 см</td>
-        </tr>
-      </table>
+      <div class="goods-main__desc">
+        <p class="goods-main__text">Экологически чистая пряжа, ручная&nbsp;работа. Доступны в шести расцветках, и трех
+          размерах.</p>
+        <table class="goods-main__table table">
+          <tr>
+            <td class="table__td">Цвет:</td>
+            <td class="table__td">«Тиффани»/серый</td>
+          </tr>
+          <tr>
+            <td class="table__td">Диаметр:</td>
+            <td class="table__td">25 см</td>
+          </tr>
+          <tr>
+            <td class="table__td">Высота:</td>
+            <td class="table__td">15 см</td>
+          </tr>
+        </table>
+      </div>
       <div class="goods-main__img">
         <picture>
           <source type="image/webp" media="(min-width: 1150px)"
@@ -123,14 +127,16 @@
             alt="Набор корзинок">
         </picture>
       </div>
-      <p class="goods-main__price">Цена: 990 руб.</p>
-      <a class="btn btn__goods-main" href="catalog-item.html">
-        <span class="visually-hidden">Добавить в корзину</span>
-        Заказать
-      </a>
+      <div class="goods-main__price-wrapper">
+        <p class="goods-main__price">Цена: 990 руб.</p>
+        <a class="btn btn__goods-main" href="catalog-item.html">
+          <span class="visually-hidden">Добавить в корзину</span>
+          Заказать
+        </a>
+      </div>
     </section>
 
-    <section class="about container">
+    <section class="about">
       <h2 class="about__title">Коротко о нас:</h2>
       <ul class="about__list about-list">
         <li class="about-list__item about-list__item--ecology">
@@ -172,7 +178,7 @@
       </ul>
     </section>
 
-    <section class="comments container">
+    <section class="comments">
       <h2 class="comments__title">Отзывы</h2>
       <div class="comments__wrapper slider">
         <div class="comments__list slider__list">
@@ -201,38 +207,38 @@
     </section>
 
     <section class="contacts">
-      <h2 class="contacts__title">Контакты</h2>
-      <div class="contacts__block-wrapper">
-        <p class="contacts__mail">e-mail: <a class="contacts__link"
+      <div class="contacts__info">
+        <h2 class="contacts__info-title">Контакты</h2>
+        <p class="contacts__info-mail">e-mail: <a class="contacts__mail"
             href="mailo:info@mimimishkashop.ru">info@mimimishkashop.ru</a></p>
-        <address class="contacts__block">
+        <address class="contacts__info-address">
           <span class="contacts__address-title">адрес:</span>
           <span class="contacts__address">г. Санкт-Петербург,<br> ул. Большая Конюшенная,<br> д. 19/8, офис 101</span>
         </address>
       </div>
-      <a class="contacts__map" href="map.html">
+      <div class="contacts__map">
         <picture>
           <source type="image/webp" media="(min-width: 1150px)"
             srcset="img/contacts/map-desktop@1x.webp 1x, img/contacts/map-desktop@2x.webp 2x">
           <source type="image/webp" media="(min-width: 768px)"
             srcset="img/contacts/map-tablet@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
-          <source type="image/webp" srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/contacts/map-mobile@1x.webp 1x, img/contacts/map-mobile@2x.webp 2x">
 
           <source media="(min-width: 1150px)"
             srcset="img/contacts/map-desktop@1x.jpg 1x, img/contacts/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)"
             srcset="img/contacts/map-tablet@1x.jpg 1x, img/contacts/map-tablet@2x.jpg 2x">
-          <img class="contacts__map-img" src="img/contacts/map-mobile@1x.jpg" srcset="img/contacts/map-mobile@2x.jpg 2x"
+          <img src="img/contacts/map-mobile@1x.jpg" srcset="img/contacts/map-mobile@2x.jpg 2x"
             alt="г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
         </picture>
-        <iframe src="https://yandex.ru/map-widget/v1/-/CCbIeI4t"></iframe>
-      </a>
+        <div class="map" id="map"></div>
+      </div>
       <a class="btn btn__contacts" href="write.html">Напишите нам</a>
     </section>
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+    <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <svg width="102" height="34" aria-label="Логотип Mishka">
           <use xlink:href="#logo-footer"></use>
@@ -300,6 +306,7 @@
   <div class="overlay">
     <span class="visually-hidden">Закрыть попап</span>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="scripts/script.js"></script>
 </body>
 

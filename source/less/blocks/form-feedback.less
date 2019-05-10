@@ -16,7 +16,7 @@
   color: @color_text;
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 5px;
+    margin-bottom: 7px;
     padding: 0 50px;
     font-size: 17px;
     line-height: 30px;
@@ -29,26 +29,33 @@
 
 .form-feedback__fieldset {
   position: relative;
-  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
   margin-bottom: 31px;
+  padding: 0 30px;
   box-sizing: border-box;
   border: none;
 
   &--type {
-    margin-bottom: 28px;
+    margin-bottom: 30px;
+  }
+
+  &--color {
+    margin-bottom: 6px;
+    padding-bottom: 28px;
+  }
+
+  &--initials {
+    margin-bottom: 32px;
   }
 
   &--message {
     margin-bottom: 13px;
   }
 
-  &--color {
-    margin-bottom: 2px;
-    padding-bottom: 28px;
-  }
-
   @media (min-width: @tablet_width) {
     margin-bottom: 0;
+    padding: 0 50px;
 
     &--type {
       padding-top: 50px;
@@ -72,7 +79,7 @@
 
     &--message {
       margin-bottom: 0;
-      padding-top: 27px;
+      padding-top: 29px;
       padding-left: 217px;
       padding-bottom: 53px;
     }
@@ -92,6 +99,7 @@
     }
 
     &--message {
+      padding-top: 27px;
       padding-right: 225px;
       padding-left: 225px;
       padding-bottom: 49px;
@@ -138,9 +146,11 @@
   }
 
   @media (min-width: @desktop_width) {
-    left: 113px;
+    top: 67px;
+    left: 112px;
 
     &--tel {
+      top: 23px;
       left: 63px;
     }
 
@@ -300,6 +310,10 @@
   @media (min-width: @tablet_width) {
     margin-bottom: 17px;
   }
+
+  @media (min-width: @desktop_width) {
+    margin-bottom: 18px;
+  }
 }
 
 .form-feedback__list--contact {
@@ -390,10 +404,10 @@
 .form-feedback__input-checkbox:checked + label::after {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 13px;
   left: 9px;
-  width: 20px;
-  height: 10px;
+  width: 17px;
+  height: 6px;
   border: 2px solid #000000;
   border-top-color: transparent;
   border-right-color: transparent;
@@ -514,7 +528,14 @@
 .form-feedback__submit-wrapper {
   display: flex;
   flex-wrap: wrap;
-  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet_width) {
+    padding: 0 50px;
+  }
 }
 
 .required__fields {

@@ -1,6 +1,5 @@
 .navigation {
   position: relative;
-  min-width: 320px;
   max-width: 1150px;
   margin: 0 auto;
 
@@ -10,7 +9,7 @@
   }
 }
 
-.navigation__logo-wrapper {
+.navigation__logo {
   order: 0;
   border-bottom: 1px solid @color_border;
 
@@ -20,23 +19,24 @@
   }
 
   @media (min-width: @desktop_width) {
+    display: flex;
     flex-grow: 0;
     order: 1;
   }
 }
 
-.navigation__logo {
+.navigation__logo-wrapper {
   display: block;
   text-align: center;
   padding: 21px 0 17px;
   transition: opacity 0.2s ease-in-out;
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     opacity: 0.6;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 
@@ -46,11 +46,12 @@
   }
 
   @media (min-width: @desktop_width) {
+    margin: auto;
     padding: 7px 0;
   }
 }
 
-.navigation__logo img {
+.navigation__logo-wrapper img {
   width: 86px;
   height: 35px;
 
@@ -120,9 +121,10 @@
     position: absolute;
     top: 0;
     right: 500px;
-    width: calc(50vw - 583px);
+    width: calc(50vw - 574px);
     height: 100%;
     background-color: #ffffff;
+    border-bottom: 1px solid @color_border;
   }
 
   @media (min-width: @tablet_width) {
@@ -132,6 +134,7 @@
   }
 
   @media (min-width: @desktop_width) {
+    flex-wrap: nowrap;
     order: 0;
     width: 500px;
     border-bottom: 1px solid @color_border;
@@ -151,6 +154,7 @@
   }
 
   @media (min-width: @desktop_width) {
+    display: flex;
     margin-right: 33px;
 
     &:not(:last-child) {
@@ -178,6 +182,7 @@
   }
 
   @media (min-width: @desktop_width) {
+    margin: auto;
     padding-top: 32px;
     padding-bottom: 32px;
     font-size: 17px;
@@ -202,9 +207,10 @@
     position: absolute;
     top: 0;
     left: 500px;
-    width: calc(50vw - 583px);
+    width: calc(50vw - 574px);
     height: 100%;
     background-color: #ffffff;
+    border-bottom: 1px solid @color_border;
   }
 
   @media (min-width: @tablet_width) {
@@ -216,6 +222,7 @@
   }
 
   @media (min-width: @desktop_width) {
+    flex-wrap: nowrap;
     order: 2;
     width: 500px;
     margin: 0;
@@ -284,6 +291,7 @@
   cursor: pointer;
 
   svg {
+    margin: auto;
     padding: 30px;
     fill: #cccccc;
     transition: 0.2s ease-in-out;
@@ -333,8 +341,12 @@
     justify-content: space-between;
     order: 3;
     padding-left: 50px;
-    width: 352px;
   }
+}
+
+.offer-list__item {
+  width: 196px;
+  margin-right: 23px;
 }
 
 .offer-list__item-link {
@@ -356,6 +368,7 @@
 
 .header__delivery {
   display: none;
+  max-width: 400px;
   margin: 0;
   font-size: 15px;
   line-height: 24px;
