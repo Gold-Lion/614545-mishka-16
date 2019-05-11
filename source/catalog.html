@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 
 <body>
-  <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+  <include src="build/img/sprite.svg"></include>
 
   <header class="page-header">
     <nav class="navigation">
-      <div class="navigation__logo-wrapper">
-        <a class="navigation__logo" href="index.html">
+      <div class="navigation__logo">
+        <a class="navigation__logo-wrapper" href="index.html">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
@@ -74,7 +76,7 @@
       <div class="catalog__wrapper">
         <ul class="catalog__list catalog-list">
           <li class="catalog-list__item">
-            <a class="catalog-list__img-link" href="#">
+            <a class="catalog-list__img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/catalog/photo-hare-desktop@1x.webp 1x, img/catalog/photo-hare-desktop@2x.webp 2x">
@@ -86,11 +88,11 @@
                   srcset="img/catalog/photo-hare-desktop@1x.jpg 1x, img/catalog/photo-hare-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/catalog/photo-hare-tablet@1x.jpg 1x, img/catalog/photo-hare-tablet@2x.jpg 2x">
-                <img class="catalog-list__img" src="img/catalog/photo-hare-mobile@1x.jpg"
+                <img src="img/catalog/photo-hare-mobile@1x.jpg"
                   srcset="img/catalog/photo-hare-mobile@2x.jpg 2x" alt="Зайчик-попрыгайчик">
               </picture>
             </a>
-            <div class="catalog-list__desc-wrapper">
+            <div class="catalog-list__desc">
               <h3 class="catalog-list__title">
                 <a href="#">Зайчик-попрыгайчик</a>
               </h3>
@@ -107,7 +109,7 @@
             </div>
           </li>
           <li class="catalog-list__item">
-            <a class="catalog-list__img-link" href="#">
+            <a class="catalog-list__img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/catalog/photo-bowl-desktop@1x.webp 1x, img/catalog/photo-bowl-desktop@2x.webp 2x">
@@ -119,11 +121,11 @@
                   srcset="img/catalog/photo-bowl-desktop@1x.jpg 1x, img/catalog/photo-bowl-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/catalog/photo-bowl-tablet@1x.jpg 1x, img/catalog/photo-bowl-tablet@2x.jpg 2x">
-                <img class="catalog-list__img" src="img/catalog/photo-bowl-mobile@1x.jpg"
+                <img src="img/catalog/photo-bowl-mobile@1x.jpg"
                   srcset="img/catalog/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
               </picture>
             </a>
-            <div class="catalog-list__desc-wrapper">
+            <div class="catalog-list__desc">
               <h3 class="catalog-list__title">
                 <a href="#">Корзинка для белья</a>
               </h3>
@@ -140,7 +142,7 @@
             </div>
           </li>
           <li class="catalog-list__item">
-            <a class="catalog-list__img-link" href="#">
+            <a class="catalog-list__img" href="#">
               <picture>
                 <source type="image/webp" media="(min-width: 1150px)"
                   srcset="img/catalog/photo-toys-desktop@1x.webp 1x, img/catalog/photo-toys-desktop@2x.webp 2x">
@@ -152,11 +154,11 @@
                   srcset="img/catalog/photo-toys-desktop@1x.jpg 1x, img/catalog/photo-toys-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/catalog/photo-toys-tablet@1x.jpg 1x, img/catalog/photo-toys-tablet@2x.jpg 2x">
-                <img class="catalog-list__img" src="img/catalog/photo-toys-mobile@1x.jpg"
+                <img src="img/catalog/photo-toys-mobile@1x.jpg"
                   srcset="img/catalog/photo-toys-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
               </picture>
             </a>
-            <div class="catalog-list__desc-wrapper">
+            <div class="catalog-list__desc">
               <h3 class="catalog-list__title">
                 <a href="#">Большая корзинка для&nbsp;игрушек</a>
               </h3>
@@ -194,7 +196,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+    <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <svg width="102" height="34" aria-label="Логотип Mishka">
           <use xlink:href="#logo-footer"></use>

@@ -14,6 +14,7 @@ var csso = require("gulp-csso");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
+var cheerio = require("gulp-cheerio");
 var server = require("browser-sync").create();
 
 gulp.task("css", function () {
@@ -50,6 +51,12 @@ gulp.task("sprite", function () {
   return gulp.src("source/img/**/*.svg")
     .pipe(svgstore({
       inlineSvg: true
+    }))
+    .pipe(cheerio({
+      run: function ($) {
+        $('svg').addClass('visually-hidden');
+      },
+      parserOptions: { xmlMode: true }
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
@@ -96,7 +103,7 @@ gulp.task("server", function () {
     ui: false
   });
 
-  gulp.watch("source/less/**/*.less", gulp.series("css"));
+  gulp.watch("source/less/**/*.less", gulp.series("css", "refresh"));
   gulp.watch("source/img/*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
 });

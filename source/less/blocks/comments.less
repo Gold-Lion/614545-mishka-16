@@ -1,7 +1,11 @@
 .comments {
   position: relative;
-  margin-bottom: 35px;
-  padding-bottom: 53px;
+  max-width: 1150px;
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding: 0 30px;
+  padding-bottom: 51px;
+  box-sizing: border-box;
 
   &::after {
     content: "";
@@ -17,9 +21,10 @@
   }
 
   @media (min-width: @tablet_width) {
-    margin-bottom: 60px;
-    padding-top: 77px;
-    padding-bottom: 135px;
+    margin-bottom: 62px;
+    padding: 0 50px;
+    padding-top: 78px;
+    padding-bottom: 130px;
 
     &::before {
       content: "";
@@ -46,9 +51,9 @@
   }
 
   @media (min-width: @desktop_width) {
-    margin-bottom: 141px;
+    margin-bottom: 140px;
     padding-top: 0;
-    padding-left: 224px;
+    padding-left: 225px;
     padding-bottom: 187px;
 
     &::before {
@@ -93,7 +98,7 @@
 
 .comments__item {
   margin: 0;
-  margin-bottom: 26px;
+  margin-bottom: 30px;
 
   @media (min-width: @tablet_width) {
     margin-bottom: 0;
@@ -117,18 +122,18 @@
 
 .comments__auth-name {
   display: block;
-  margin-top: 22px;
+  margin-top: 27px;
   font-size: 17px;
   font-weight: @font_weight_bold;
   font-style: normal;
 
   @media (min-width: @tablet_width) {
-    margin-top: 52px;
+    margin-top: 57px;
     font-size: 18px;
   }
 
   @media (min-width: @desktop_width) {
-    margin-top: 35px;
+    margin-top: 38px;
   }
 }
 
@@ -141,7 +146,7 @@
 
 .comments__toggles {
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 37px;
 
   @media (min-width: @tablet_width) {
     margin-bottom: 0;
@@ -158,7 +163,7 @@
   @media (min-width: @tablet_width) {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: 3px;
     width: 175px;
   }
 }

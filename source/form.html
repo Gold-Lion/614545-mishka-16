@@ -7,17 +7,19 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style-min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff" as="font">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
 </head>
 
 <body>
-  <div style="display: none;">
-    <include src="build/img/sprite.svg"></include>
-  </div>
+  <include src="build/img/sprite.svg"></include>
 
   <header class="page-header">
     <nav class="navigation">
-      <div class="navigation__logo-wrapper">
-        <a class="navigation__logo" href="index.html">
+      <div class="navigation__logo">
+        <a class="navigation__logo-wrapper" href="index.html">
           <picture>
             <source media="(min-width: 1150px)" srcset="img/logo/logo-desktop.svg">
             <source media="(min-width: 768px)" srcset="img/logo/logo-tablet.svg">
@@ -75,19 +77,19 @@
       <p class="form-feedback__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
 
-      <fieldset class="form-feedback__fieldset form-feedback__fieldset--type container">
+      <fieldset class="form-feedback__fieldset form-feedback__fieldset--type">
         <legend class="form-feedback__legend">
           <span class="form-feedback__legend-text">Тип</span>
         </legend>
         <ul class="form-feedback__list form-feedback__list--type">
           <li class="form-feedback__item">
-            <input class="form-feedback__input-radio visually-hidden" id="accessory-id" type="radio" name="type-name"
+            <input class="form-feedback__input-radio visually-hidden" id="accessory-id" type="radio" name="type"
               value="accessory-interior" checked>
             <label class="form-feedback__label form-feedback__label-radio" for="accessory-id">Аксессуар для
               интерьера</label>
           </li>
           <li class="form-feedback__item">
-            <input class="form-feedback__input-radio visually-hidden" id="toy-id" type="radio" name="type-name"
+            <input class="form-feedback__input-radio visually-hidden" id="toy-id" type="radio" name="type"
               value="children-toy">
             <label class="form-feedback__label form-feedback__label-radio" for="toy-id">Детская игрушка</label>
           </li>
@@ -95,46 +97,46 @@
       </fieldset>
 
       <div class="form-feedback__fieldset-wrapper">
-        <fieldset class="form-feedback__fieldset form-feedback__fieldset--color container">
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--color">
           <legend class="form-feedback__legend">
             <span class="form-feedback__legend-text">Цвет</span>
           </legend>
           <ul class="form-feedback__list form-feedback__list--color">
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="white-id" type="checkbox"
-                name="color-white" checked>
+                name="color" value="white" checked>
               <label class="form-feedback__label form-feedback__label-checkbox" for="white-id">Белый</label>
             </li>
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="grey-id" type="checkbox"
-                name="color-grey" checked>
+                name="color" value="grey" checked>
               <label class="form-feedback__label form-feedback__label-checkbox" for="grey-id">Серый</label>
             </li>
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="tiffany-id" type="checkbox"
-                name="color-tiffany">
+                name="color" value="tiffany">
               <label class="form-feedback__label form-feedback__label-checkbox" for="tiffany-id">«Тиффани»</label>
             </li>
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="black-id" type="checkbox"
-                name="color-black">
+                name="color" value="black">
               <label class="form-feedback__label form-feedback__label-checkbox" for="black-id">Черный</label>
             </li>
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="pink-id" type="checkbox"
-                name="color-pink">
+                name="color" value="pink">
               <label class="form-feedback__label form-feedback__label-checkbox" for="pink-id">Розовый</label>
             </li>
             <li class="form-feedback__item">
               <input class="form-feedback__input-checkbox visually-hidden" id="orandge-id" type="checkbox"
-                name="color-orandge">
+                name="color" value="orandge">
               <label class="form-feedback__label form-feedback__label-checkbox" for="orandge-id">Оранжевый</label>
             </li>
           </ul>
         </fieldset>
       </div>
 
-      <fieldset class="form-feedback__fieldset form-feedback__fieldset--initials container">
+      <fieldset class="form-feedback__fieldset form-feedback__fieldset--initials">
         <legend class="form-feedback__legend">
           <span class="form-feedback__legend-text">ФИО</span>
         </legend>
@@ -142,13 +144,13 @@
           <li class="form-feedback__item">
             <label class="form-feedback__label" for="name-id">Имя:
               <input class="form-feedback__input-text" id="name-id" type="text" name="name-user"
-                placeholder="Введите ваше имя*">
+                placeholder="Введите ваше имя*" required>
             </label>
           </li>
           <li class="form-feedback__item">
             <label class="form-feedback__label" for="surname-id">Фамилия:
               <input class="form-feedback__input-text" id="surname-id" type="text" name="surname-user"
-                placeholder="Укажите фамилию*">
+                placeholder="Укажите фамилию*" required>
             </label>
           </li>
           <li class="form-feedback__item">
@@ -161,14 +163,14 @@
       </fieldset>
 
       <div class="form-feedback__fieldset-wrapper">
-        <fieldset class="form-feedback__fieldset form-feedback__fieldset--contact container">
+        <fieldset class="form-feedback__fieldset form-feedback__fieldset--contact">
           <div class="form-feedback__list form-feedback__list--contact">
             <label class="form-feedback__legend form-feedback__legend--tel" for="tel-id">
               <span class="form-feedback__legend-text">Тел</span>
             </label>
             <p class="form-feedback__item">
               <input class="form-feedback__input-tel" id="tel-id" type="tel" name="tel-user"
-                placeholder="+7 XXX XXX XX XX*">
+                placeholder="+7 XXX XXX XX XX*" required>
               <svg width="25" height="24">
                 <use xlink:href="#icon-phone"></use>
               </svg>
@@ -178,7 +180,7 @@
             </label>
             <p class="form-feedback__item">
               <input class="form-feedback__input-email" id="email-id" type="email" name="email-user"
-                placeholder="Ваш Email*">
+                placeholder="Ваш Email*" required>
               <svg width="32" height="32">
                 <use xlink:href="#icon-mail"></use>
               </svg>
@@ -187,7 +189,7 @@
         </fieldset>
       </div>
 
-      <fieldset class="form-feedback__fieldset form-feedback__fieldset--message container">
+      <fieldset class="form-feedback__fieldset form-feedback__fieldset--message">
         <label class="form-feedback__legend form-feedback__legend--message" for="message-id">
           <span class="form-feedback__legend-text">Доп</span>
         </label>
@@ -195,7 +197,7 @@
           placeholder="Опишите все ваши пожелания к заказу"></textarea>
       </fieldset>
 
-      <div class="form-feedback__submit-wrapper container">
+      <div class="form-feedback__submit-wrapper">
         <small class="required__fields">
           <sup>*</sup>Поля обязательны для заполнения
         </small>
@@ -205,7 +207,7 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper container">
+    <div class="page-footer__wrapper">
       <a class="page-footer__logo" href="index.html">
         <svg width="102" height="34" aria-label="Логотип Mishka">
           <use xlink:href="#logo-footer"></use>
