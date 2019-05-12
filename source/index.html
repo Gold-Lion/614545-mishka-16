@@ -182,7 +182,7 @@
       <h2 class="comments__title">Отзывы</h2>
       <div class="comments__wrapper slider">
         <div class="comments__list slider__list">
-          <blockquote class="comments__item slider__item">
+          <blockquote class="comments__item slider__item slider__item-first slider__item--active">
             <p class="comments__text">
               Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных
               инстамамочек.
@@ -191,6 +191,15 @@
               больше лайков!<br>
               <cite class="comments__auth-name">Анастасия Красильникова</cite>
               <a class="comments__auth-mail" href="mailto:@misssssiskras">@misssssiskras</a>
+            </p>
+          </blockquote>
+          <blockquote class="comments__item slider__item slider__item-second">
+            <p class="comments__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Eum labore suscipit ipsum optio facere alias, culpa unde id minima expedita asperiores sequi?
+              Voluptatem eum praesentium consectetur, reprehenderit doloremque tempora corporis!<br>
+              <cite class="comments__auth-name">Ксения Воробьева</cite>
+              <a class="comments__auth-mail" href="mailto:@missKsu">@missKsu</a>
             </p>
           </blockquote>
           <div class="comments__toggles slider__toggles">
@@ -274,7 +283,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано
           <svg width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="#logo-htmlacademy"></use>
@@ -308,6 +317,23 @@
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="scripts/script.js"></script>
+  <script>
+    var slider = document.querySelector(".slider__item");
+    var sliderFirst = document.querySelector(".slider__item-first");
+    var sliderSecond = document.querySelector(".slider__item-second");
+    var btnSliderNext = document.querySelector(".slider__toggle--next");
+    var btnSliderPrev = document.querySelector(".slider__toggle--prev");
+
+    btnSliderPrev.addEventListener("click", function() {
+      sliderFirst.classList.add("slider__item--active");
+      sliderSecond.classList.remove("slider__item--active");
+    });
+
+    btnSliderNext.addEventListener("click", function() {
+      sliderSecond.classList.add("slider__item--active");
+      sliderFirst.classList.remove("slider__item--active");
+    });
+  </script>
 </body>
 
 </html>

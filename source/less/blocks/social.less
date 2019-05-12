@@ -1,0 +1,44 @@
+.social {
+  border-bottom: 1px solid #e5e5e5;
+
+  @media (min-width: @tablet_width) {
+    border: none;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: space-between;
+  width: 142px;
+  .list-reset();
+  margin: 0 auto;
+  padding-bottom: 27px;
+
+  @media (min-width: @tablet_width) {
+    padding: 0;
+    padding-top: 9px;
+  }
+}
+
+.social__item {
+  display: flex;
+}
+
+.social__link {
+  display: flex;
+  margin: auto;
+  transition: 0.2s ease-in-out;
+
+  svg {
+    transition: 0.2s ease-in-out;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @greeny_blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
