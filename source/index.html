@@ -317,23 +317,6 @@
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="scripts/script.js"></script>
-  <script>
-    var slider = document.querySelector(".slider__item");
-    var sliderFirst = document.querySelector(".slider__item-first");
-    var sliderSecond = document.querySelector(".slider__item-second");
-    var btnSliderNext = document.querySelector(".slider__toggle--next");
-    var btnSliderPrev = document.querySelector(".slider__toggle--prev");
-
-    btnSliderPrev.addEventListener("click", function() {
-      sliderFirst.classList.add("slider__item--active");
-      sliderSecond.classList.remove("slider__item--active");
-    });
-
-    btnSliderNext.addEventListener("click", function() {
-      sliderSecond.classList.add("slider__item--active");
-      sliderFirst.classList.remove("slider__item--active");
-    });
-  </script>
 </body>
 
 </html>
