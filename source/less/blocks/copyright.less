@@ -1,0 +1,36 @@
+.copyright {
+  padding-top: 20px;
+
+  @media (min-width: @tablet_width) {
+    padding: 0;
+    padding-top: 6px;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 182px;
+  font-size: 19px;
+  line-height: 1;
+  font-weight: @font_weight_bold;
+  text-decoration: none;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+
+  svg {
+    transition: 0.2s ease-in-out;
+    fill: @seafoam_blue;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @greeny_blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}

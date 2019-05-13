@@ -232,7 +232,7 @@
           </li>
         </ul>
       </div>
-      <div class="footer__copyright copyright">
+      <div class="page-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">Разработано
           <svg width="27" height="34" aria-label="Логотип HTML Academy">
             <use xlink:href="#logo-htmlacademy"></use>
@@ -249,12 +249,12 @@
         <fieldset class="modal-form__fieldset">
           <legend class="modal-form__legend">Выберите размер:</legend>
           <p class="modal-form__block">
-            <label class="modal-form__label modal-form__label--checked" for="s-id">S</label>
-            <input class="visually-hidden input-size" id="s-id" type="text" name="size-s">
-            <label class="modal-form__label" for="m-id">M</label>
-            <input class="visually-hidden input-size" id="m-id" type="text" name="size-m">
-            <label class="modal-form__label" for="l-id">L</label>
-            <input class="visually-hidden input-size input-size" id="l-id" type="text" name="size-l">
+            <input class="modal-form__input visually-hidden" id="s-size" type="radio" name="size" value="s" checked>
+            <label class="modal-form__label" for="s-size">S</label>
+            <input class="modal-form__input visually-hidden" id="m-size" type="radio" name="size" value="m">
+            <label class="modal-form__label" for="m-size">M</label>
+            <input class="modal-form__input visually-hidden" id="l-size" type="radio" name="size" value="l">
+            <label class="modal-form__label" for="l-size">L</label>
           </p>
         </fieldset>
         <button class="btn btn__modal-add" type="submit">Добавить</button>

@@ -1,8 +1,20 @@
 var navMenu = document.querySelector(".navigation");
 var navToggle = document.querySelector(".navigation__toggle");
 var popup = document.querySelector(".modal");
-var btnOrder = document.querySelector(".btn__goods-main");
 var closeModal = document.querySelector(".overlay");
+var slider = document.querySelector(".slider__item");
+var sliderFirst = document.querySelector(".slider__item-first");
+var sliderSecond = document.querySelector(".slider__item-second");
+var btnSliderNext = document.querySelector(".slider__toggle--next");
+var btnSliderPrev = document.querySelector(".slider__toggle--prev");
+var btnOrder = document.querySelector(".btn__goods-main");
+var btnCart = document.querySelector(".catalog-list__price-icon");
+var showModal = function (evt) {
+  evt.preventDefault();
+  popup.classList.add("modal__show");
+  popup.classList.add("modal-apper");
+  closeModal.classList.add("overlay--active");
+}
 
 navMenu.classList.remove("navigation--nojs");
 
@@ -10,12 +22,11 @@ navToggle.addEventListener("click", function () {
   navMenu.classList.toggle("navigation--opened");
 });
 
-btnOrder.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  popup.classList.add("modal__show");
-  popup.classList.add("modal-apper");
-  closeModal.classList.add("overlay--active");
-});
+if (btnOrder) {
+  btnOrder.addEventListener("click", showModal);
+} else {
+  btnCart.addEventListener("click", showModal);
+}
 
 closeModal.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -24,28 +35,35 @@ closeModal.addEventListener("click", function (evt) {
 });
 
 window.addEventListener("keydown", function (evt) {
-  if (evt.keyCode === 27) {
-    if (popup.classList.contains("modal__show")) {
-      evt.preventDefault();
-      popup.classList.remove("modal__show");
-      closeModal.classList.remove("overlay--active");
-    }
+  if (evt.keyCode === 27 && popup.classList.contains("modal__show")) {
+    evt.preventDefault();
+    popup.classList.remove("modal__show");
+    closeModal.classList.remove("overlay--active");
   }
 });
 
+btnSliderPrev.addEventListener("click", function() {
+  sliderFirst.classList.add("slider__item--active");
+  sliderSecond.classList.remove("slider__item--active");
+});
+
+btnSliderNext.addEventListener("click", function() {
+  sliderSecond.classList.add("slider__item--active");
+  sliderFirst.classList.remove("slider__item--active");
+});
+
 document.addEventListener("DOMContentLoaded", function (event) {
-  ymaps.ready(init); // активируем карту после загрузки страницы
+  ymaps.ready(init);
   var map;
   function init() {
-    map = new ymaps.Map("map", { // в кавычках id элемента куда загружается карта
+    map = new ymaps.Map("map", {
       center: [59.93944115603922, 30.32302403991186],
-      // координаты центра фрагмента карты, подобрать можно на https://vk.cc/9n163G
       zoom: 16,
       controls: ["zoomControl"]
     });
-    var placemark = new ymaps.Placemark([59.938633647616214, 30.32304549758399], {}, { // координаты метки
+    var placemark = new ymaps.Placemark([59.938633647616214, 30.32304549758399], {}, {
       iconLayout: "default#image",
-      iconImageHref: "../img/decor/icon-map-pin.svg", // иконка метки
+      iconImageHref: "../img/decor/icon-map-pin.svg",
       iconImageSize: [67, 100],
       iconImageOffset: [-33, -101]
     });
