@@ -7,8 +7,7 @@ var sliderFirst = document.querySelector(".slider__item-first");
 var sliderSecond = document.querySelector(".slider__item-second");
 var btnSliderNext = document.querySelector(".slider__toggle--next");
 var btnSliderPrev = document.querySelector(".slider__toggle--prev");
-var btnOrder = document.querySelector(".btn__goods-main");
-var btnCart = document.querySelector(".catalog-list__price-icon");
+var modalTriggers = document.querySelectorAll(".js-modal");
 var showModal = function (evt) {
   evt.preventDefault();
   popup.classList.add("modal__show");
@@ -16,17 +15,15 @@ var showModal = function (evt) {
   closeModal.classList.add("overlay--active");
 }
 
+for (var i = 0; i < modalTriggers.length; i++) {
+  modalTriggers[i].addEventListener("click", showModal);
+}
+
 navMenu.classList.remove("navigation--nojs");
 
 navToggle.addEventListener("click", function () {
   navMenu.classList.toggle("navigation--opened");
 });
-
-if (btnOrder) {
-  btnOrder.addEventListener("click", showModal);
-} else {
-  btnCart.addEventListener("click", showModal);
-}
 
 closeModal.addEventListener("click", function (evt) {
   evt.preventDefault();
@@ -42,12 +39,12 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
-btnSliderPrev.addEventListener("click", function() {
+btnSliderPrev.addEventListener("click", function () {
   sliderFirst.classList.add("slider__item--active");
   sliderSecond.classList.remove("slider__item--active");
 });
 
-btnSliderNext.addEventListener("click", function() {
+btnSliderNext.addEventListener("click", function () {
   sliderSecond.classList.add("slider__item--active");
   sliderFirst.classList.remove("slider__item--active");
 });
